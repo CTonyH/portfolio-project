@@ -5,5 +5,16 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    font-family: 'Robotomono';
+}
+
+@font-face {
+    font-family: Handjet;
+    src: url(../public/assets/fonts/Handjet-VariableFont_ELGR\,ELSH\,wght.ttf);
+}
+
+@font-face {
+    font-family: Robotomono;
+    src: url(../public/assets/fonts/RobotoMono-VariableFont_wght.ttf);
 }
 /* You can add global styles to this file, and also import other style files */

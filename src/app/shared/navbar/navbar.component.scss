@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom, #0b042d, #0b042d 20%);
+  background: linear-gradient(to bottom, #0b042d 80%, #ffffff00);
   height: 92px;
   width: 100%;
   padding-top: 24px;
@@ -17,6 +17,7 @@ nav {
   }
   > .navigation {
     gap: 50px;
+    align-items: center;
   }
   .translation {
     > li {
@@ -47,4 +48,8 @@ a {
   color: #e15544;
   font-size: 1.5rem;
   font-weight: 500;
+}
+#logo{
+  font-family: 'Handjet';
+  font-size: 3rem;
 }
