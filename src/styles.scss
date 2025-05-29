@@ -8,6 +8,11 @@
     font-family: 'Robotomono';
     background-color: #0B042D;
 }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @font-face {
     font-family: Handjet;
