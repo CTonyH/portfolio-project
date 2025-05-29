@@ -39,4 +39,44 @@ body {
     transition: 0.5s;
     
 }
+
+.btn-2 {
+    background-color: #02F4BF;
+    color: #0B042D;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: color 0.3s ease;
+    &:hover {
+        color: #E15544;
+        transition: color 0.5s ease;
+    }
+}
+
+h1 {
+    color: #02F4BF;
+}
+
+h2 {
+    color: #E15544;
+    font-weight: 500;
+    font-size: 3.375rem;
+}
+
+p {
+    color: #02F4BF;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+section {
+  height: 100dvh;
+  width: 100%;
+  padding-left: 100px;
+}
+
+.content {
+  display: flex;
+}
 /* You can add global styles to this file, and also import other style files */
