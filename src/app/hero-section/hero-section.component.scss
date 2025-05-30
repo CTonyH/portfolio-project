@@ -58,7 +58,7 @@ img {
   width: 30px;
   left: 580px;
   top: 200px;
-  border: #02f4bf, solid, 1px;
+  // border: #02f4bf, solid, 1px;
   padding: 20px;
   position: absolute;
   &:hover {
@@ -91,7 +91,6 @@ img {
   top: 200px;
   > img {
     height: 50px;
-    border: #02f4bf, solid, 1px;
     padding: 5px;
   }
 }
@@ -102,7 +101,6 @@ img {
     left: 580px;
     top: 200px;
     height: 50px;
-    border: #02f4bf, solid, 1px;
     padding: 5px;
   }
 }
