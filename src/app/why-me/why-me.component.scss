@@ -4,9 +4,21 @@
 
 .content-right-site {
     flex-grow: 1;
+    >div {
+        text-align: right;
+    }
+}
+
+#image-me {
+    height: 452px;
     
 }
 
-img {
-    height: 452px;
+.i-am-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.symbol-container {
+
 }
