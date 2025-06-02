@@ -1,11 +1,12 @@
-section {
-    max-width: 1440px;
+.content-all {
+    display: flex;
 }
 
-.located {
-    background-image: url('/assets/images/location1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 57px;
-    width: 235px;
+.content-right-site {
+    flex-grow: 1;
+    
+}
+
+img {
+    height: 452px;
 }

@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class WhyMeComponent {
 
+//   changeImg(){
+//     let container = document.getElementById('remote-container') as HTMLDivElement;
+//     x.style.display = "none";
+//   }
 }
