@@ -6,11 +6,12 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { MyFeedbacksComponent } from "./my-feedbacks/my-feedbacks.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, HeroSectionComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, HeroSectionComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, MyFeedbacksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

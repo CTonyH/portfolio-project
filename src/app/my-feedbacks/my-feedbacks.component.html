@@ -1,0 +1,9 @@
+<section>
+    <h4>Need a teamplayer? Here what my colleagues said about me</h4>
+     <div>
+        <img src="../../../assets/images/arrow-right.png" alt="">
+    </div>
+    @for (feedback of feedbacks; track $index) {
+        <app-feedback [feedback]="feedback"></app-feedback>
+    }
+</section>
