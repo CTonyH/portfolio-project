@@ -9,26 +9,26 @@ export interface Project {
 }
 @Component({
   selector: 'app-my-projects',
-  imports: [ProjectComponent],
   standalone: true,
+  imports: [ProjectComponent],
   templateUrl: './my-projects.component.html',
   styleUrl: './my-projects.component.scss',
 })
 export class MyProjectsComponent {
   projects: Project[] = [
     {
-      name: 'El-Pollo-Loco',
-      includedSkills: 'JavaScript | HTML | CSS',
-      description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      image: '/assets/images/Pollo loco.png',
-    },
-    {
       name: 'JOIN',
       includedSkills: 'Angular | TypeScript | HTML | CSS | Firebase',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-      image: '/assets/images/angular.png',
+      image: '../../assets/images/join-clear.png',
+    },
+    {
+      name: 'El-Pollo-Loco',
+      includedSkills: 'JavaScript | HTML | CSS',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      image: '../../assets/images/pollo-loco.png',
     },
   ];
 }

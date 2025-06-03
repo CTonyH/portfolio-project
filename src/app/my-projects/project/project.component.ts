@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from '../my-projects.component';
 
 
 
 @Component({
   selector: 'app-project',
-  imports: [],
   standalone: true,
+  imports: [],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
-
+  @Input() project!: Project;
 }

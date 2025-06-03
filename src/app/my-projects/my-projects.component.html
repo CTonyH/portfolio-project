@@ -1,4 +1,11 @@
-@for (project of projects; track $index) {
-    <app-project></app-project>
+<section>
+  <h2>My Projects</h2>
+  @for (project of projects; track $index) {
+  <app-project [project]="project"></app-project>
 
-}
+  }
+  <div>
+    <button>GitHub</button>
+    <button>Live Test</button>
+  </div>
+</section>

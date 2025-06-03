@@ -9,6 +9,7 @@ import { MyProjectsComponent } from './my-projects/my-projects.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, NavbarComponent, FooterComponent, HeroSectionComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
