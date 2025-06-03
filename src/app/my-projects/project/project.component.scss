@@ -1,3 +1,36 @@
 .content {
     display: flex;
+    margin-top: 70px;
+    gap: 100px;
+}
+
+.image-container {
+    >img {
+        height: 371px;
+    }
+}
+
+.right-site {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.description-container {
+    margin-top: 25px;
+}
+
+.button-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.github {
+    font-weight: 500;
+}
+
+.livetest {
+    font-weight: 500;
+    font-size: 18px;
 }
