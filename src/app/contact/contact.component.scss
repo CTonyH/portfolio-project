@@ -1,0 +1,57 @@
+.header-container {
+  display: flex;
+}
+
+.information-container {
+  display: flex;
+  gap: 50px;
+}
+
+.tel-container {
+  display: flex;
+}
+.email-container {
+  display: flex;
+}
+
+.form-container {
+  display: flex;
+  gap: 30px;
+}
+
+.policy-container {
+  display: flex;
+  gap: 20px;
+}
+
+form {
+    margin-top: 50px;
+}
+
+.name-mail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  > input {
+    border: 1.5px solid #02f4bf;
+    width: 507px;
+    height: 56px;
+    padding: 25px;
+    color: #02f4bf;
+    &::placeholder {
+      color: hsla(167, 98%, 48%, 1);
+    }
+  }
+}
+
+#message {
+  border: 1.5px solid #02f4bf;
+  width: 637px;
+  height: 144px;
+  padding: 25px;
+  &::placeholder {
+    color: hsla(167, 98%, 48%, 1);
+    position: absolute;
+    top: 15px;
+  }
+}

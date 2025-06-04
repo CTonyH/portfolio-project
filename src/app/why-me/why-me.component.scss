@@ -38,12 +38,9 @@
 }
 
 .remote-image {
-    background-image: url('/assets/images/remote1.png');
-    height: 60px;
+    
     &:hover {
-       transform: remote;
-       transition: transform 0.5s ease-in;
-        
+        animation: remote 0.5s ease-in;
     }
     
 }
