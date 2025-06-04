@@ -1,7 +1,8 @@
 <section>
   <h2>My Projects</h2>
   @for (project of projects; track $index) {
-  <app-project [project]="project"></app-project>
+    
+  <app-project [class.reverse] = "$index % 2 !== 0"  [project]="project"></app-project>
 
   }
   

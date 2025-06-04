@@ -1,24 +1,55 @@
 .content-all {
-    display: flex;
+  display: flex;
 }
 
 .content-right-site {
-    flex-grow: 1;
-    >div {
-        text-align: right;
-    }
+  flex-grow: 1;
+  > div {
+    text-align: right;
+  }
 }
 
 #image-me {
-    height: 452px;
-    
+  height: 452px;
 }
 
 .i-am-container {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 50px;
 }
 
 .symbol-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
 
+.located-container {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: -90px;
+}
+
+.remote-image {
+    background-image: url('/assets/images/remote1.png');
+    height: 60px;
+    &:hover {
+       transform: remote;
+       transition: transform 0.5s ease-in;
+        
+    }
+    
+}
+
+@keyframes remote {
+    100%{
+        background-image: url('/assets/images/remote2.png');
+    }
 }
