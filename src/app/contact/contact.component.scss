@@ -5,6 +5,7 @@
 .information-container {
   display: flex;
   gap: 50px;
+  margin-top: 20px;
 }
 
 .tel-container {
@@ -25,7 +26,7 @@
 }
 
 form {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .name-mail-container {
@@ -49,9 +50,54 @@ form {
   width: 637px;
   height: 144px;
   padding: 25px;
+  color: #02f4bf;
   &::placeholder {
     color: hsla(167, 98%, 48%, 1);
-    position: absolute;
-    top: 15px;
+  }
+}
+
+span {
+  color: #02f4bf;
+  width: 507px;
+}
+
+.checkbox-container {
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    &:checked {
+      background-color: #02f4bf;
+      border-color: #e15544;
+      &::after {
+        content: "✓";
+        color: #e15544;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(2, 244, 191, 0.3);
+    }
+    &:hover {
+      box-shadow: 0 0 10px rgba(2, 244, 191, 0.2);
+    }
+
+    &:focus {
+      color: #e15544;
+    }
   }
 }
