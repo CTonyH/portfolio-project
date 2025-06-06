@@ -2,7 +2,9 @@
   <div class="">
     <div class="header-container">
       <h2>Contact Me</h2>
-      <img src="" alt="Arrow" />
+      <div>
+        <img src="/assets/images/contact-arrow.png" alt="Arrow" />
+      </div>
     </div>
 
     <div class="information-container">
@@ -15,17 +17,17 @@
       <div>
         <div class="email-container">
           <div>
-            <img src="" alt="E-Mail" />
+            <img src="assets/images/icon-email.png" alt="E-Mail" />
           </div>
           <div>
             <p>
-              "E-Mail: <a href="'mailto:' + email">{{ email }}</a>
+              E-Mail: <a href="'mailto:' + email">{{ email }}</a>
             </p>
           </div>
         </div>
         <div class="tel-container">
           <div>
-            <img src="" alt="telefon" />
+            <img src="/assets/images/icon-phone.png" alt="telefon" />
           </div>
           <div>
             <p>Tel: 0175 236 1337</p>
@@ -53,7 +55,7 @@
       <br />
       <div class="policy-container">
         <div class="checkbox-container">
-          <input type="checkbox" required />
+          <input type="checkbox" required [(ngModel)] = "privacyAccepted" name="privacy" />
         </div>
         <div>
           <p>
@@ -61,6 +63,9 @@
             processing of my data as outlined.
           </p>
         </div>
+      </div>
+      <div class="submit-container" >
+        <input type="submit" [disabled]="!privacyAccepted" [class.btn-disabled] = "!privacyAccepted" [class.btn-enabled] = "privacyAccepted" />
       </div>
     </form>
   </div>
