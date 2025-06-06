@@ -16,10 +16,74 @@
 
 .tel-container {
   display: flex;
+  gap: 10px;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .email-container {
   display: flex;
+  align-items: center;
+  gap: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+
 }
+
+.phone-number-container {
+    font-size: 20px;
+    font-weight: 500;
+    color: #02f4bf;
+     &:active {
+      color: #02f4bf;
+    }
+}
+
+.email-container:hover .hover-mail {
+    opacity: 1;
+}
+
+.email-container:hover .icon-email {
+  opacity: 0;
+}
+
+.email-link-container {
+
+  > a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #02f4bf;
+
+    &:active {
+      color: #02f4bf;
+    }
+  }
+}
+
+.icon-email {
+    color: #02f4bf;
+}
+
+.hover-mail {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    opacity: 0;
+}
+
+.hover-phone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.tel-container:hover .hover-phone {
+    opacity: 1;
+}
+
 
 .form-container {
   display: flex;
@@ -111,30 +175,27 @@ span {
   display: flex;
   justify-content: flex-end;
   width: 1205px;
-  > input {
-    
-  }
 }
 
 .btn-disabled {
-    background: transparent;
-    font-size: 1.125rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-    color: hsla(0, 3%, 50%, 1);
-    border: 1px solid hsla(0, 3%, 50%, 1);
+  background: transparent;
+  font-size: 1.125rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  color: hsla(0, 3%, 50%, 1);
+  border: 1px solid hsla(0, 3%, 50%, 1);
 }
 
 .btn-enabled {
-    color: #e15544;
-    border: #02f4bf 1px solid;
-    background: transparent;
-    font-size: 1.125rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-    cursor: pointer;
+  color: #e15544;
+  border: #02f4bf 1px solid;
+  background: transparent;
+  font-size: 1.125rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  cursor: pointer;
 }

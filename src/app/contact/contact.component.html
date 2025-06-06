@@ -17,20 +17,20 @@
       <div>
         <div class="email-container">
           <div>
-            <img src="assets/images/icon-email.png" alt="E-Mail" />
+            <img class="icon-email" src="assets/images/icon-email.png" alt="E-Mail" />
+            <img class="hover-mail" src="assets/images/hover-mail.png" alt="">
           </div>
-          <div>
-            <p>
-              E-Mail: <a href="'mailto:' + email">{{ email }}</a>
-            </p>
+          <div class="email-link-container">
+               <a href="'mailto:' + email">E-Mail: {{ email }}</a>
           </div>
         </div>
         <div class="tel-container">
           <div>
-            <img src="/assets/images/icon-phone.png" alt="telefon" />
+            <img class="icon-phone" src="/assets/images/icon-phone.png" alt="telefon" />
+            <img class="hover-phone" src="/assets/images/hover-phone.png" alt="telefon">
           </div>
-          <div>
-            <p>Tel: 0175 236 1337</p>
+          <div class="phone-number-container">
+            <a href="tel:+491752361337">Tel: 0175 236 1337</a>
           </div>
         </div>
       </div>
@@ -68,5 +68,6 @@
         <input type="submit" [disabled]="!privacyAccepted" [class.btn-disabled] = "!privacyAccepted" [class.btn-enabled] = "privacyAccepted" />
       </div>
     </form>
+
   </div>
 </section>
