@@ -1,3 +1,61 @@
 section {
-    height: 196px;
+  height: 196px;
+}
+
+.svg:hover .svg-orange {
+  fill: #02f4bf;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 196px;
+}
+
+.logo-container {
+  margin-top: -100px;
+  > p {
+    color: #e15544;
+  }
+}
+
+.logo {
+  font-family: Handjet;
+  text-decoration: none;
+  color: #e15544;
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.copyright-container {
+  text-align: center;
+  > p {
+    font-size: 23px;
+    font-weight: 400;
+    color: #e15544;
+  }
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sozial-link-container {
+  display: flex;
+  gap: 30px;
+}
+
+a {
+  color: #e15544;
+  font-size: 14px;
 }
