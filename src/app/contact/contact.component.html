@@ -17,17 +17,29 @@
       <div>
         <div class="email-container">
           <div>
-            <img class="icon-email" src="assets/images/icon-email.png" alt="E-Mail" />
-            <img class="hover-mail" src="assets/images/hover-mail.png" alt="">
+            <img
+              class="icon-email"
+              src="assets/images/icon-email.png"
+              alt="E-Mail"
+            />
+            <img class="hover-mail" src="assets/images/hover-mail.png" alt="" />
           </div>
           <div class="email-link-container">
-               <a href="mailto: + email">E-Mail: {{ email }}</a>
+            <a href="mailto: + email">E-Mail: {{ email }}</a>
           </div>
         </div>
         <div class="tel-container">
           <div>
-            <img class="icon-phone" src="/assets/images/icon-phone.png" alt="telefon" />
-            <img class="hover-phone" src="/assets/images/hover-phone.png" alt="telefon">
+            <img
+              class="icon-phone"
+              src="/assets/images/icon-phone.png"
+              alt="telefon"
+            />
+            <img
+              class="hover-phone"
+              src="/assets/images/hover-phone.png"
+              alt="telefon"
+            />
           </div>
           <div class="phone-number-container">
             <a href="tel:+491752361337">Tel: 0175 236 1337</a>
@@ -40,8 +52,33 @@
       <div class="form-container">
         <div class="name-mail-container">
           <input id="name" type="text" placeholder="Your Name" required />
+          <div class="invalid-name">
+            <p>Dein Name muss eingegeben werden</p>
+            <img
+              class="invalid-image"
+              src="/assets/images/invalidinput.png"
+              alt=""
+            />
+            <img
+              class="right-image-name"
+              src="/assets/images/right-input.png"
+              alt=""
+            />
+          </div>
+
           <br />
-          <input id="email" type="email" placeholder="Your Email" required />
+          <div class="mail-container">
+            <input id="email" type="email" placeholder="Your Email" required />
+            <div class="invalid-mail">
+              <p>Gib bitte eine E-Mail ein</p>
+              <img src="/assets/images/invalidinput.png" alt="" />
+              <img
+                class="right-image-mail"
+                src="/assets/images/right-input.png"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
         <br />
         <div>
@@ -50,12 +87,30 @@
             id="message"
             placeholder="Your Message"
           ></textarea>
+          <div class="invalid-message">
+            <p>Bitte eine Nachricht eingeben</p>
+            <img
+              class="invalid-image"
+              src="/assets/images/invalidinput.png"
+              alt=""
+            />
+            <img
+              class="right-image-message"
+              src="/assets/images/right-input.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
       <br />
       <div class="policy-container">
         <div class="checkbox-container">
-          <input type="checkbox" required [(ngModel)] = "privacyAccepted" name="privacy" />
+          <input
+            type="checkbox"
+            required
+            [(ngModel)]="privacyAccepted"
+            name="privacy"
+          />
         </div>
         <div>
           <p>
@@ -64,10 +119,14 @@
           </p>
         </div>
       </div>
-      <div class="submit-container" >
-        <input type="submit" [disabled]="!privacyAccepted" [class.btn-disabled] = "!privacyAccepted" [class.btn-enabled] = "privacyAccepted" />
+      <div class="submit-container">
+        <input
+          type="submit"
+          [disabled]="!privacyAccepted"
+          [class.btn-disabled]="!privacyAccepted"
+          [class.btn-enabled]="privacyAccepted"
+        />
       </div>
     </form>
-
   </div>
 </section>
