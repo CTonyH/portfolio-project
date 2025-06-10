@@ -29,20 +29,22 @@
   &:hover {
     cursor: pointer;
   }
-
 }
 
 .phone-number-container {
+  > a {
     font-size: 20px;
     font-weight: 500;
     color: #02f4bf;
-     &:active {
+    &:visited {
       color: #02f4bf;
+      text-decoration: #02f4bf solid;
     }
+  }
 }
 
 .email-container:hover .hover-mail {
-    opacity: 1;
+  opacity: 1;
 }
 
 .email-container:hover .icon-email {
@@ -50,40 +52,39 @@
 }
 
 .email-link-container {
-
   > a {
     font-size: 20px;
     font-weight: 500;
     color: #02f4bf;
 
-    &:active {
+    &:visited {
       color: #02f4bf;
+      text-decoration: #02f4bf solid;
     }
   }
 }
 
 .icon-email {
-    color: #02f4bf;
+  color: #02f4bf;
 }
 
 .hover-mail {
-    position: absolute;
-    right: 0px;
-    top: 0;
-    opacity: 0;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  opacity: 0;
 }
 
 .hover-phone {
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
 }
 
 .tel-container:hover .hover-phone {
-    opacity: 1;
+  opacity: 1;
 }
-
 
 .form-container {
   display: flex;
