@@ -215,7 +215,7 @@ span {
 }
 
 .invalid-name {
-  display: flex;
+  display: none;
   justify-content: space-between;
   position: absolute;
   top: 15px;
@@ -231,7 +231,7 @@ span {
 }
 
 .invalid-message {
-  display: flex;
+  display: none;
   justify-content: space-between;
   position: absolute;
   top: 25px;
@@ -247,7 +247,7 @@ span {
 }
 
 .invalid-mail {
-  display: flex;
+  display: none;
   justify-content: space-between;
   position: absolute;
   top: 17px;
@@ -266,16 +266,19 @@ span {
   position: absolute;
   right: -350px;
   top: -10px;
+  display: none;
 }
 
 .right-image-mail {
   position: absolute;
   right: -350px;
   top: -10px;
+  display: none;
 }
 
 .right-image-name {
   position: absolute;
   right: -200px;
   top: -5px;
+  display: none;
 }

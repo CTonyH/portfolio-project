@@ -51,14 +51,24 @@
     <form action="">
       <div class="form-container">
         <div class="name-mail-container">
-          <input id="name" type="text" placeholder="Your Name" required />
+          <input
+            id="name"
+            type="text"
+            placeholder="Your Name"
+            required
+            [(ngModel)]="nameInput"
+          />
+
           <div class="invalid-name">
+            @if (nameInput.length < 3) {
             <p>Dein Name muss eingegeben werden</p>
             <img
               class="invalid-image"
               src="/assets/images/invalidinput.png"
               alt=""
             />
+            }
+
             <img
               class="right-image-name"
               src="/assets/images/right-input.png"
