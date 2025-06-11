@@ -14,8 +14,4 @@ export class ContactComponent {
   email = 'tony.hirschligau@googlemail.com';
   isFocused: {[key: string]: boolean} = {};
   privacyAccepted: boolean = false;
-
-  contactMe(){
-
-  }
 }

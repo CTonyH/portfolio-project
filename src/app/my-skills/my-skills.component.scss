@@ -1,5 +1,5 @@
 section {
-    height: 400px;
+    height: 450px;
 }
 .display-flex {
     display: flex;
@@ -7,13 +7,12 @@ section {
     align-items: center;
     justify-content: center;
     height: 100px;
+    gap: 10px;
 }
 
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
     height: 500px;
+    max-width: 1440px;
 }
 
 img {
@@ -21,3 +20,40 @@ img {
     object-fit: scale-down;
     flex-wrap: wrap;
 }
+
+h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.my-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.challengeme {
+    transition-duration: 0.9s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.hidden-text {
+    width: 253px;
+    height: 108px;
+    color: #02f4bf;
+    margin-left: -30px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+}
+
+.challengeme:hover + .hidden-text {
+    opacity: 1;
+    visibility: visible;
+    
+}
+
