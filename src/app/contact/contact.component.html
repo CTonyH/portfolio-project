@@ -48,68 +48,101 @@
       </div>
     </div>
 
-    <form action="">
+    <form #contactForm="ngForm" (ngSubmit)="contactMe()">
       <div class="form-container">
         <div class="name-mail-container">
           <input
-            id="name"
+            name="name"
             type="text"
             placeholder="Your Name"
             required
-            [(ngModel)]="nameInput"
+            minlength="3"
+            #name="ngModel"
+            ngModel
+            (focus)="isFocused['name'] = true"
+            (blur)="isFocused['name'] = false"
           />
-
-          <div class="invalid-name">
-            @if (nameInput.length < 3) {
-            <p>Dein Name muss eingegeben werden</p>
+          <span
+            *ngIf="name.invalid && name.touched && !isFocused['name']"
+            class="invalid-name"
+            >Your name is required
+          </span>
+          <img
+            *ngIf="name.invalid && name.touched"
+            class="invalid-image"
+            src="/assets/images/invalidinput.png"
+            alt=""
+          />
+          <img
+            class="valid-image"
+            *ngIf="name.valid"
+            src="/assets/images/right-input.png"
+            alt=""
+          />
+          <br />
+          <div class="mail-container">
+            <input
+              name="email"
+              type="email"
+              placeholder="Your Email"
+              #email="ngModel"
+              required
+              email
+              ngModel
+              (focus)="isFocused['email'] = true"
+              (blur)="isFocused['email'] = false"
+            />
+            <span
+              *ngIf="email.invalid && email.touched && !isFocused['email']"
+              class="invalid-mail"
+              >Your E-Mail is required
+            </span>
             <img
+              *ngIf="email.invalid && email.touched"
               class="invalid-image"
               src="/assets/images/invalidinput.png"
               alt=""
             />
-            }
-
             <img
-              class="right-image-name"
+              class="valid-image"
+              *ngIf="email.valid"
               src="/assets/images/right-input.png"
               alt=""
             />
           </div>
-
           <br />
-          <div class="mail-container">
-            <input id="email" type="email" placeholder="Your Email" required />
-            <div class="invalid-mail">
-              <p>Gib bitte eine E-Mail ein</p>
-              <img src="/assets/images/invalidinput.png" alt="" />
-              <img
-                class="right-image-mail"
-                src="/assets/images/right-input.png"
-                alt=""
-              />
-            </div>
-          </div>
         </div>
-        <br />
         <div>
           <textarea
             name="message"
             id="message"
             placeholder="Your Message"
+            minlength="10"
+            maxlength="500"
+            ngModel
+            required
+            #message="ngModel"
+            message
+            (focus)="isFocused['message'] = true"
+            (blur)="isFocused['message'] = false"
           ></textarea>
-          <div class="invalid-message">
-            <p>Bitte eine Nachricht eingeben</p>
-            <img
-              class="invalid-image"
-              src="/assets/images/invalidinput.png"
-              alt=""
-            />
-            <img
-              class="right-image-message"
-              src="/assets/images/right-input.png"
-              alt=""
-            />
-          </div>
+          <span
+            *ngIf="message.invalid && message.touched && !isFocused['message']"
+            class="invalid-message"
+            >Please enter message
+          </span>
+          <img
+            *ngIf="message.invalid && message.touched"
+            class="invalid-image"
+            src="/assets/images/invalidinput.png"
+            alt=""
+          />
+          <img
+            class="valid-image"
+            *ngIf="message.valid"
+            src="/assets/images/right-input.png"
+            alt=""
+          />
         </div>
       </div>
       <br />
@@ -120,6 +153,7 @@
             required
             [(ngModel)]="privacyAccepted"
             name="privacy"
+            ngModel
           />
         </div>
         <div>
@@ -132,7 +166,7 @@
       <div class="submit-container">
         <input
           type="submit"
-          [disabled]="!privacyAccepted"
+          [disabled]="privacyAccepted"
           [class.btn-disabled]="!privacyAccepted"
           [class.btn-enabled]="privacyAccepted"
         />

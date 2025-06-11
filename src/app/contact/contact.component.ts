@@ -1,29 +1,21 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
+import { Component} from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 
 let email: string;
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
   email = 'tony.hirschligau@googlemail.com';
-
+  isFocused: {[key: string]: boolean} = {};
   privacyAccepted: boolean = false;
-  @ViewChild('invalid-name') containerRef!: ElementRef;
-  nameInput: string = '';
 
-constructor(private renderer: Renderer2){
+  contactMe(){
 
-}
-
-  getInputData() {
-    if (this.nameInput.length < 3) {
-      this.renderer.setStyle(this.containerRef.nativeElement, 'display', 'block');
-    } else {
-    }
   }
 }
