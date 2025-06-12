@@ -4,8 +4,8 @@
 }
 
 .txt-btn-container {
-  padding-top: 40px;
-  padding-right: 100px;
+  padding-top: 2.5rem;
+  padding-right: 6.25rem;
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -17,28 +17,9 @@
   }
 }
 
-.btn-container {
-  margin-top: 4rem;
-  > img {
-    height: 50px;
-    position: absolute;
-    left: 580px;
-    top: 200px;
-    &:hover {
-      color: #02f4bf;
-      cursor: pointer;
-      border: solid, 1px, #02f4bf;
-    }
-  }
-
-  > button {
-    transform: rotate(270deg);
-    transform-origin: bottom;
-  }
-}
-
 p {
   color: #02f4bf;
+  font-size: clamp(1.8rem, calc(7vw + 1rem), 3.313rem);
 }
 
 .image-container {
@@ -46,58 +27,42 @@ p {
   align-items: flex-end;
 }
 
-img {
-  height: 35.625rem;
-//   width: 33.688;
- 
+.pic-me {
+  max-width: 100%;
+  height: auto;
 }
 
-.image-hover {
-  background-image: url("/assets/images/Arrow down.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 70px;
-  width: 30px;
-  left: 580px;
-  top: 200px;
-  // border: #02f4bf, solid, 1px;
-  padding: 20px;
-  position: absolute;
-  &:hover {
-    background-image: url("/assets/images/Vector.png");
-  }
-}
-
-.imageBox .hoverImg {
-  position: absolute;
+.button-wrapper {
+  position: relative;
   left: 0;
-  top: 0;
-  display: none;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.imageInn:hover {
-  > img {
-    display: none;
-  }
+.vertical-button {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
-.imageBox:hover .hoverImg {
-  display: block;
+.btn-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.imageBox {
   position: absolute;
-  left: 580px;
-  top: 200px;
-  > img {
-    height: 50px;
-    padding: 5px;
-  }
+  top: 12.5rem;
+  left: 37.5rem;
 }
 
-.imageInn {
-  > img {
-    position: absolute;
-    left: 580px;
-    top: 200px;
-    height: 50px;
-    padding: 5px;
-  }
+.imageBox:hover .svg-arrow {
+  fill: #02f4bf;
+  stroke: #02f4bf;
+  stroke-width: 1;
+  
+}
+
+.imageBox:hover svg {
+  outline: 1px solid #02f4bf;
+  outline-offset: 5px;
 }

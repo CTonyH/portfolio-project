@@ -1,72 +1,64 @@
+section {
+  height: 37.5rem;
+}
+
 .content {
   display: flex;
 }
 
 .content-right-site {
   flex-grow: 1;
-  width: 729px;
+  width: 45.563rem;
   > div {
     text-align: right;
   }
 }
 
 #image-me {
-  height: 452px;
+  height: 28.25rem;
 }
 
 .i-am-container {
   display: flex;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   justify-content: center;
-  gap: 50px;
+  gap: 3.125rem;
 }
 
 .symbol-container {
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  margin-right: -80px;
+  gap: 5rem;
+  margin-right: -5rem;
 }
 
 .located-container {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  width: 12.5rem;
 }
 
 .btn-container {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  // margin-bottom: -90px;
   margin-top: 150px;
   margin-left: 80px;
 }
 
-// .remote-image {
-//     transition: all 0.9s ease-in-out;
-//     &:hover {
-//        content: url('/assets/images/remote2.png');
-//     }
-    
-// }
-
-// @keyframes remote {
-//     100%{
-//         background-image: url('/assets/images/remote2.png');
-//     }
-// }
-
 .remote-image-wrapper {
   position: relative;
-  width: 200px; /* oder deine Bildgröße */
-  height: 100px;
+  width: 9.375rem;
+  height: 6.25rem;
 }
 
 .image {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   transition: opacity 0.5s ease-in-out;
 }
@@ -91,20 +83,34 @@
 
 .arrow5 {
   // position: absolute;
- height: 100px;
- margin-top: 40px;
- margin-right: -100px;
+  height: 6.25rem;
+  margin-top: 2.5rem;
+  margin-right: -6.25rem;
 }
 
 .arrow3 {
   // transform: rotateX('80deg');
-  margin-left: -70px;
-  margin-right: 100px;
-  margin-bottom: 30px;
+  margin-left: -4.375rem;
+  margin-right: 6.25rem;
+  margin-bottom: 1.875rem;
 }
 
-.ellipse {
-  height: 7px;
-  margin-left: -46px;
-  margin-bottom: -50px;
+.hover-location{
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.location-image {
+  transition: opacity 0.5s ease-in-out;
+  position: block;
+}
+
+.located-container:hover .hover-location {
+  opacity: 1;
+}
+
+.located-container:hover .location-image{
+  opacity: 0;
 }

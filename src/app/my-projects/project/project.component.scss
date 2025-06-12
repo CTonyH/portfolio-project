@@ -2,7 +2,6 @@
   display: flex;
   margin-top: 70px;
   gap: 100px;
-  
 }
 :host {
   display: flex;
@@ -18,8 +17,10 @@
 }
 
 .image-container {
+  background: linear-gradient(to bottom);
   > img {
-    height: 371px;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -49,5 +50,28 @@
 
 .livetest {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%; /* Höhe des Overlays */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(11, 4, 45, 0.22) 49%
+  );
+  color: white; /* Optional: Textfarbe */
+  display: flex;
+  align-items: center;
+  padding: 0 0.625rem;
+  font-size: 1rem;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 0;
+  }
 }

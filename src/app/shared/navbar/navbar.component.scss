@@ -6,10 +6,8 @@ nav {
   
   width: 100%;
   max-width: 1440px;
-  padding-top: 24px;
-  // padding-right: 140px;
-  padding-bottom: 24px;
-  padding-left: 250px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   position: sticky;
 
   > div {
@@ -17,14 +15,14 @@ nav {
     max-width: 1440px;
   }
   > .navigation {
-    gap: 50px;
+    gap: 3.125rem;
     align-items: center;
     max-width: 1440px;
   }
   .translation {
     > li {
       display: flex;
-      gap: 10px;
+      gap: 0.625rem;
       > a {
         transition: color 0.2s;
 
@@ -34,9 +32,6 @@ nav {
       }
     }
   }
-}
-
-.content {
 }
 
 li {
@@ -60,5 +55,5 @@ a {
 }
 
 section {
-  height: 92px;
+  height: 5.75rem;
 }

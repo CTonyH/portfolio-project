@@ -1,21 +1,26 @@
 .feebacks-container {
     display: flex;
-    gap: 50px;
+    gap: 3.125rem;
     align-items: center;
     justify-content: center;
 }
 
-.header-container {
+.header-container {  
   > h4 {
-    margin-top: 50px;
+    margin-top: 3.125rem;
   }
   
     >img {
-        margin-bottom: -50px;
-        margin-top: 30px;
-        margin-left: 20px;
+        margin-bottom: -3.125rem;
+        margin-top: 1.875rem;
+        margin-left: -1.875rem;
         z-index: 2;
     }
   }
+
+  section {
+    height: 18.75rem;
+  }
+
 
 
