@@ -19,7 +19,13 @@
   }
 
   section {
-    height: 18.75rem;
+    height: 20rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
   }
 
 

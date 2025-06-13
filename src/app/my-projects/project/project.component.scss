@@ -24,9 +24,6 @@
   }
 }
 
-.reverse {
-}
-
 .right-site {
   display: flex;
   flex-direction: column;
@@ -58,13 +55,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%; /* Höhe des Overlays */
+  height: 100%; 
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
     rgba(11, 4, 45, 0.22) 49%
   );
-  color: white; /* Optional: Textfarbe */
+  color: white; 
   display: flex;
   align-items: center;
   padding: 0 0.625rem;

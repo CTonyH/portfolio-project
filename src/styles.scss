@@ -6,7 +6,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
   font-family: "Robotomono";
-  background-color: #0b042d;
+  
 }
 body {
   display: flex;
@@ -14,6 +14,7 @@ body {
   justify-content: center;
   padding-left: min(6rem, 10%);
   padding-right: min(6rem, 10%);
+  background: linear-gradient(138deg,rgba(11, 4, 45, 1) 11%, rgba(29, 10, 121, 1) 49%, rgba(19, 7, 78, 1) 71%);
 }
 
 @font-face {
@@ -58,13 +59,13 @@ body {
 
 h1 {
   color: #02f4bf;
-  font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+  font-size: clamp(1.8rem, 8vw, 5rem);
 }
 
 h2 {
   color: #e15544;
   font-weight: 500;
-  font-size: clamp(1.8rem, calc(7vw + 1rem), 3.375rem);
+  font-size: clamp(1.8rem, 8vw, 3.375rem);
 }
 
 h3 {
@@ -76,14 +77,13 @@ h3 {
 h4 {
   color: #e15544;
   font-size: 1.5rem;
-  font-size: clamp(1rem, calc(5vw + 1rem), 1.5rem);
+  font-size: clamp(1rem, 8vw, 1.5rem);
   font-weight: 700;
 }
 
 p {
   color: #02f4bf;
   font-weight: 400;
-  font-size: 1rem;
 }
 
 section {
