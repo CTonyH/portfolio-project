@@ -1,14 +1,28 @@
+.nav-wrapper {
+  height: 100px;
+  width: 100vw;
+  background: linear-gradient(to bottom, #0b042d 80%, #ffffff00);
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom, #0b042d 80%, #ffffff00);
-  
+
   width: 100%;
   max-width: 1440px;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  position: sticky;
 
   > div {
     display: flex;
@@ -17,7 +31,7 @@ nav {
   > .navigation {
     gap: 3.125rem;
     align-items: center;
-    max-width: 1440px;
+    width: 100%;
   }
   .translation {
     > li {
@@ -28,6 +42,31 @@ nav {
 
         > a:hover {
           opacity: 1;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .navigation li:not(.logo) {
+      display: none;
+    }
+    .translation {
+      display: none;
+    }
+    .burger-menu-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        &:hover {
+          cursor: pointer;
         }
       }
     }
@@ -48,12 +87,55 @@ a {
   color: #e15544;
   font-size: 1.5rem;
   font-weight: 500;
+  &:hover {
+    cursor: pointer;
+  }
 }
+
 #logo {
   font-family: "Handjet";
   font-size: 3rem;
 }
 
-section {
-  height: 5.75rem;
+.mobile-nav {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(180deg, #0b042d 11%, #1d0a79 49%, #13074e 71%);
+  max-width: 390px;
+  width: 100%;
+  height: 437px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  .close-svg-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    svg {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.burger-menu-container {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
