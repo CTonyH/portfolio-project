@@ -8,6 +8,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { MyFeedbacksComponent } from "./my-feedbacks/my-feedbacks.component";
 import { ContactComponent } from './contact/contact.component';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -18,4 +19,7 @@ import { ContactComponent } from './contact/contact.component';
 })
 export class AppComponent {
   title = 'portfolio-project';
+
+  
 }
+
