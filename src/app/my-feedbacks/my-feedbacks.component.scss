@@ -1,32 +1,25 @@
-.feebacks-container {
-    display: flex;
-    gap: 3.125rem;
-    align-items: center;
-    justify-content: center;
+.my-feedbacks-wrapper {
+  max-width: 1440px;
+  width: 100%;
 }
 
-.header-container {  
-  > h4 {
-    margin-top: 3.125rem;
-  }
-  
-    >img {
-        margin-bottom: -3.125rem;
-        margin-top: 1.875rem;
-        margin-left: -1.875rem;
-        z-index: 2;
-    }
-  }
+.feedbacks-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
 
-  section {
-    height: 20rem;
-  }
+app-feedback {
+  width: 30%;
+}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-  }
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 
-
-
+svg {
+  position: absolute;
+  top: 180%;
+}
