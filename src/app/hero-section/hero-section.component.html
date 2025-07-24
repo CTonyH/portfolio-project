@@ -1,17 +1,16 @@
-<section>
+<section id="home" class="wrapper">
   <div class="content">
     <div class="txt-btn-container">
       <div class="btn-container">
-        <div class="button-wrapper">
-          <button class="btn-1 vertical-button">CONTACT ME</button>
-        </div>
-        <div class="imageBox">
+        <button (click)="setAnchorTo('contact')" class="btn-1 vertical-button">CONTACT ME</button>
+        <div (click)="setAnchorTo('why-me')" class="svg-container">
           <svg
             width="22"
             height="50"
             viewBox="0 0 22 50"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            
           >
             <path
               class="svg-arrow"

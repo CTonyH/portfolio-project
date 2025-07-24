@@ -1,68 +1,97 @@
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+}
+
 .content {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: clamp(1rem, 5vw, 2rem);
+  @media (max-width: 670px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 .txt-btn-container {
-  padding-top: 2.5rem;
-  padding-right: 6.25rem;
-  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  > button {
-    font-size: 1.125;
-    padding: 1rem;
+  width: 60%;
+  gap: 7rem;
+  @media (max-width: 670px) {
+    width: 100%;
+    text-align: center;
+    gap: 0;
+  }
+}
+
+.vertical-button {
+  background: transparent;
+  border: 2px solid #02f4bf;
+  color: #e15544;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  min-height: 120px;
+  transform: rotate(180deg);
+
+  &:hover {
+    color: #02f4bf;
+  }
+  @media (max-width: 670px) {
+    display: none;
   }
 }
 
 .title-text {
   color: #02f4bf;
-  font-size: clamp(1.8rem, calc(7vw + 1rem), 3.313rem);
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+
+.txt-btn-container > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .image-container {
-  display: flex;
-  align-items: flex-end;
+  max-width: 539px;
+  min-width: 332px;
+  width: 35%;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 670px) {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
 }
 
-.pic-me {
-  max-width: 100%;
-  height: auto;
-}
-
-.button-wrapper {
-  position: relative;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.vertical-button {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-}
-
-.btn-container {
-  display: flex;
-  flex-grow: 1;
-}
-
-.imageBox {
+.svg-container {
   position: absolute;
-  top: 12.5rem;
-  left: 37.5rem;
-}
-
-.imageBox:hover .svg-arrow {
-  fill: #02f4bf;
-  stroke: #02f4bf;
-  stroke-width: 1;
-  
-}
-
-.imageBox:hover svg {
-  outline: 1px solid #02f4bf;
-  outline-offset: 5px;
+  top: 80%;
+  right: 20%;
+  padding: 0.3rem;
+  &:hover {
+    border: 1px solid #02f4bf;
+    cursor: pointer;
+  }
+  &:hover .svg-arrow {
+    fill: #02f4bf;
+  }
+  @media (max-width: 670px) {
+    display: none;
+  }
 }
