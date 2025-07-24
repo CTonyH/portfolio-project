@@ -13,12 +13,7 @@ body {
   justify-content: center;
   padding-left: min(6rem, 5%);
   padding-right: min(6rem, 5%);
-  background: linear-gradient(
-    180deg,
-    #0b042d 11%,
-    #1d0a79 49%,
-    #13074e 71%
-  );
+  background: linear-gradient(180deg, #0b042d 11%, #1d0a79 49%, #13074e 71%);
   margin: 0;
 }
 
@@ -93,9 +88,9 @@ p {
 
 .content {
   max-width: 1440px;
+  width: 100%;
 }
 
 .svg:hover .svg-orange {
   fill: #02f4bf;
 }
-
