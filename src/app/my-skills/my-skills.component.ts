@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -8,5 +8,24 @@ import { Component } from '@angular/core';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
+
+  isDesktop: boolean = false;
+
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isDesktop = window.innerWidth > 768;
+  }
+
+  get isMobile() {
+    return !this.isDesktop;
+  }
 
 }
