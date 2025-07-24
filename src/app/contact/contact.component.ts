@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgIf, ViewportScroller } from '@angular/common';
 import { Component} from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -14,4 +14,10 @@ export class ContactComponent {
   email = 'tony.hirschligau@googlemail.com';
   isFocused: {[key: string]: boolean} = {};
   privacyAccepted: boolean = false;
+
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  setAnchorTo (anchor: string): void {
+    this.viewportScroller.scrollToAnchor(anchor);
+  }
 }
