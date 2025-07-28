@@ -2,22 +2,46 @@
   max-width: 1440px;
   width: 100%;
   display: flex;
+  @media (max-width: 1098px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
 }
 
 :host.reverse .content {
   flex-direction: row-reverse;
   justify-content: flex-end;
   text-align: right;
+  @media (max-width: 1098px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 :host.reverse .right-site {
   padding-left: 0;
   padding-right: 3rem;
+  @media (max-width: 850px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .image-container {
   background: linear-gradient(to bottom);
   width: 50%;
+  @media (max-width: 1098px) {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 
   img {
     width: 100%;
@@ -32,6 +56,12 @@
   gap: 25px;
   width: 50%;
   padding-left: 3rem;
+  @media (max-width: 1098px) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 1rem;
+  }
 }
 
 .description-container {
@@ -42,6 +72,9 @@
   display: flex;
   gap: 25px;
   margin-top: 25px;
+  @media (max-width: 1098px) {
+    display: none;
+  }
 }
 
 :host.reverse .button-container {
@@ -77,5 +110,23 @@
   transition: opacity 0.5s ease;
   &:hover {
     opacity: 0;
+  }
+}
+
+.button-container-mobile {
+  display: none;
+  gap: 2rem;
+  @media (max-width: 1098px) {
+    display: flex;
+  }
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+}
+
+button {
+  @media (max-width: 480px) {
+    padding: clamp(1rem, 2vw, 2rem);
   }
 }

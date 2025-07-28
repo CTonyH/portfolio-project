@@ -1,22 +1,39 @@
-  <div class="content">
-    <div class="image-container">
-      <img src="{{ project.image }}" alt="Project Image" />
-      <div class="overlay"></div>
+<div class="content">
+  <div class="button-container-mobile">
+    <button (click)="goToGitHub(project.name)" class="btn-1 github">
+      {{ "project.github" | translate }}
+    </button>
+    <button (click)="goToLiveDemo(project.name)" class="btn-2 livetest">
+      {{ "project.live-test" | translate }}
+    </button>
+  </div>
+  <div class="image-container">
+    <img src="{{ project.image }}" alt="Project Image" />
+    <div class="overlay"></div>
+  </div>
+  <div class="right-site">
+    <div>
+      <h3>{{ project.name }}</h3>
     </div>
-    <div class="right-site">
-      <div>
-        <h3>{{ project.name }}</h3>
-      </div>
-      <div>
-        <p>{{ project.includedSkills }}</p>
-      </div>
-      <div class="description-container">
-        <p>{{ project.description }}</p>
-      </div>
-      <div class="button-container">
-        <button (click)="goToGitHub(project.name)" class="btn-1 github">GitHub</button>
-        <button (click)="goToLiveDemo(project.name)" class="btn-2 livetest">Live Test</button>
-      </div>
+    <div>
+      <p>{{ project.includedSkills }}</p>
+    </div>
+    <div class="description-container">
+      <p>
+        {{
+          project.translationKey
+            ? (project.translationKey | translate)
+            : project.description
+        }}
+      </p>
+    </div>
+    <div class="button-container">
+      <button (click)="goToGitHub(project.name)" class="btn-1 github">
+        {{ "project.github" | translate }}
+      </button>
+      <button (click)="goToLiveDemo(project.name)" class="btn-2 livetest">
+        {{ "project.live-test" | translate }}
+      </button>
     </div>
   </div>
-
+</div>
