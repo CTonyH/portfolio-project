@@ -71,7 +71,7 @@ svg {
     p {
       font-size: clamp(0.8rem, 2vw, 1rem);
       text-align: center;
-      color: #e15544;
+      color: var(--primary-color2);
     }
   }
 }

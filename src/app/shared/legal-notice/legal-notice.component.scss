@@ -13,11 +13,11 @@ h3 {
 
 h2 {
     font-size: clamp(1.5rem, 2vw, 4rem);
-    color: #e15544;
+    color: var(--primary-color2);
 }
 
 a {
-    color: #e15544;
+    color: var(--primary-color2);
 }
 
 .button-container {

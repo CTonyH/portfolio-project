@@ -25,7 +25,7 @@ h2 {
 
 .challengeme-container {
   display: flex;
-  color: #02f4bf;
+  color: var(--primary-color1);
   position: relative;
 
   figure {
@@ -45,7 +45,7 @@ h2 {
 }
 
 .hidden-text {
-  color: #02f4bf;
+  color: var(--primary-color1);
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;
@@ -73,7 +73,7 @@ h2 {
 }
 
 .hidden-text-mobile {
-  color: #02f4bf;
+  color: var(--primary-color1);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -104,7 +104,7 @@ figure {
 
 figcaption {
   text-align: center;
-  color: #02f4bf;
+  color: var(--primary-color1);
 }
 
 .mobile-challengeme-container {

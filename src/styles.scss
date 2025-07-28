@@ -7,6 +7,8 @@
   scroll-behavior: smooth;
   font-family: "Robotomono";
   max-width: 100%;
+  --primary-color1: #02f4bf;
+  --primary-color2: #e15544;
 }
 
 html {
@@ -49,8 +51,8 @@ nav {
 }
 
 .btn-1 {
-  border: 1px, solid, #02f4bf;
-  color: #e15544;
+  border: 1px, solid, var(--primary-color1);
+  color: var(--primary-color2);
   background: transparent;
   font-size: 1.125rem;
   padding-top: 0.75rem;
@@ -58,14 +60,14 @@ nav {
   padding-right: 1.25rem;
   padding-left: 1.25rem;
   &:hover {
-    color: #02f4bf;
+    color: var(--primary-color1);
     transition: 0.5s;
     cursor: pointer;
   }
 }
 
 .btn-2 {
-  background-color: #02f4bf;
+  background-color: var(--primary-color1);
   color: #0b042d;
   padding-top: 0.938rem;
   padding-bottom: 0.938rem;
@@ -74,38 +76,38 @@ nav {
   transition: color 0.3s ease;
   border: none;
   &:hover {
-    color: #e15544;
+    color: var(--primary-color2);
     transition: color 0.5s ease;
     cursor: pointer;
   }
 }
 
 h1 {
-  color: #02f4bf;
+  color: var(--primary-color1);
   font-size: clamp(1.5rem, 5vw, 5rem);
 }
 
 h2 {
-  color: #e15544;
+  color: var(--primary-color2);
   font-weight: 500;
   font-size: clamp(1.8rem, 8vw, 3rem);
 }
 
 h3 {
-  color: #02f4bf;
+  color: var(--primary-color1);
   font-weight: 700;
   font-size: 3rem;
 }
 
 h4 {
-  color: #e15544;
+  color: var(--primary-color2);
   font-size: 1.5rem;
   font-size: clamp(1rem, 8vw, 1.5rem);
   font-weight: 700;
 }
 
 p {
-  color: #02f4bf;
+  color: var(--primary-color1);
   font-weight: 400;
 }
 
@@ -115,10 +117,10 @@ p {
 }
 
 .svg:hover .svg-orange {
-  fill: #02f4bf;
+  fill: var(--primary-color1);
 }
 
 a {
-  color:#e15544;
+  color: var(--primary-color2);
   cursor: pointer;
 }

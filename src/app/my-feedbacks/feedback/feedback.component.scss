@@ -16,7 +16,7 @@
   scrollbar-width: none; 
 
   @media (max-width: 811px) {
-    border: 1px solid #02f4bf;
+    border: 1px solid var(--primary-color1);
     padding: clamp(1rem, 2vw, 1.5rem);
   }
 

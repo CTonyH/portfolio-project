@@ -63,10 +63,10 @@
   > a {
     font-size: 1.25rem;
     font-weight: 500;
-    color: #02f4bf;
+    color: var(--primary-color1);
     &:visited {
-      color: #02f4bf;
-      text-decoration: #02f4bf solid;
+      color: var(--primary-color1);
+      text-decoration: var(--primary-color1) solid;
     }
     @media (max-width: 930px) {
       font-size: clamp(0.9rem, 2vw, 1.5rem);
@@ -86,20 +86,20 @@
   > a {
     font-size: clamp(0.9rem, 2vw, 1.3rem);
     font-weight: 500;
-    color: #02f4bf;
+    color: var(--primary-color1);
     // @media (max-width: 930px) {
     //   font-size: 1rem;
     // }
 
     &:visited {
-      color: #02f4bf;
-      text-decoration: #02f4bf solid;
+      color: var(--primary-color1);
+      text-decoration: var(--primary-color1) solid;
     }
   }
 }
 
 .icon-email {
-  color: #02f4bf;
+  color: var(--primary-color1);
 }
 
 .hover-mail {
@@ -156,11 +156,11 @@ form {
   width: 50%;
   justify-content: space-between;
   > input {
-    border: 1.5px solid #02f4bf;
+    border: 1.5px solid var(--primary-color1);
     width: 100%;
     height: 3.5rem;
     padding: clamp(1rem, 2vw, 1.5rem);
-    color: #02f4bf;
+    color: var(--primary-color1);
     background-color: transparent;
     &::placeholder {
       color: hsla(167, 98%, 48%, 1);
@@ -176,9 +176,9 @@ form {
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
       -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-      -webkit-text-fill-color: #02f4bf !important;
+      -webkit-text-fill-color: var(--primary-color1) !important;
       background-color: transparent !important;
-      border: 1.5px solid #02f4bf !important;
+      border: 1.5px solid var(--primary-color1) !important;
       transition: background-color 5000s ease-in-out 0s;
     }
   }
@@ -190,11 +190,11 @@ form {
 
 .mail-container {
   > input {
-    border: 1.5px solid #02f4bf;
+    border: 1.5px solid var(--primary-color1);
     width: 100%;
     height: 3.5rem;
     padding: clamp(1rem, 2vw, 1.5rem);
-    color: #02f4bf;
+    color: var(--primary-color1);
     background: transparent;
     &::placeholder {
       color: hsla(167, 98%, 48%, 1);
@@ -210,20 +210,20 @@ form {
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
       -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-      -webkit-text-fill-color: #02f4bf !important;
+      -webkit-text-fill-color: var(--primary-color1) !important;
       background-color: transparent !important;
-      border: 1.5px solid #02f4bf !important;
+      border: 1.5px solid var(--primary-color1) !important;
       transition: background-color 5000s ease-in-out 0s;
     }
   }
 }
 
 #message {
-  border: 1.5px solid #02f4bf;
+  border: 1.5px solid var(--primary-color1);
   width: 100%;
   height: 100%;
   padding: clamp(1rem, 2vw, 1.5rem);
-  color: #02f4bf;
+  color: var(--primary-color1);
   background-color: transparent;
   &::placeholder {
     color: hsla(167, 98%, 48%, 1);
@@ -239,15 +239,15 @@ form {
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-    -webkit-text-fill-color: #02f4bf !important;
+    -webkit-text-fill-color: var(--primary-color1) !important;
     background-color: transparent !important;
-    border: 1.5px solid #02f4bf !important;
+    border: 1.5px solid var(--primary-color1) !important;
     transition: background-color 5000s ease-in-out 0s;
   }
 }
 
 span {
-  color: #02f4bf;
+  color: var(--primary-color1);
   width: 50%;
   @media (max-width: 930px) {
     width: 100%;
@@ -265,17 +265,17 @@ span {
     -moz-appearance: none;
     width: 1.25rem;
     height: 1.25rem;
-    border: 2px solid #e15544;
+    border: 2px solid var(--primary-color2);
     background-color: transparent;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
     &:checked {
-      background-color: #02f4bf;
-      border-color: #e15544;
+      background-color: var(--primary-color1);
+      border-color: var(--primary-color2);
       &::after {
         content: "✓";
-        color: #e15544;
+        color: var(--primary-color2);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -289,11 +289,11 @@ span {
     }
     &:hover {
       box-shadow: 0 0 10px rgba(2, 244, 191, 0.2);
-      background-color: #02f4bf;
+      background-color: var(--primary-color1);
     }
 
     &:focus {
-      color: #e15544;
+      color: var(--primary-color2);
     }
   }
 }
@@ -320,8 +320,8 @@ span {
 }
 
 .btn-enabled {
-  color: #e15544;
-  border: #02f4bf 1px solid;
+  color: var(--primary-color2);
+  border: var(--primary-color1) 1px solid;
   background: transparent;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -335,7 +335,7 @@ textarea:focus {
 }
 
 textarea.ng-invalid:focus {
-  border-color: #02f4bf;
+  border-color: var(--primary-color1);
 }
 
 input {
@@ -414,7 +414,7 @@ input {
 }
 
 .policy-link:visited {
-  color: #e15544;
+  color: var(--primary-color2);
 }
 
 .message-container {
@@ -454,16 +454,16 @@ input {
     transform: rotate(180deg);
   }
   &:hover {
-    border: 1px solid #02f4bf;
+    border: 1px solid var(--primary-color1);
     cursor: pointer;
     @media (max-width: 930px) {
       border: none;
     }
   }
   &:hover .svg-arrow {
-    fill: #02f4bf;
+    fill: var(--primary-color1);
     @media (max-width: 930px) {
-      fill: #e15544;
+      fill: var(--primary-color2);
     }
   }
   @media (max-width: 930px) {
