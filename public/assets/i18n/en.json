@@ -56,7 +56,7 @@
   "legal-notice": {
     "title": "Legal Notice",
     "info-according-tmg": "Information according to § 5 TMG:",
-    "contact": "Contact:",
+    "contact": "Contact",
     "phone": "Phone: 0175 2361337",
     "email": "Email:",
     "responsible-content": "Responsible for content according to § 55 Abs. 2 RStV:",
@@ -68,7 +68,7 @@
     "copyright-text": "The content and works created by the site operators on these pages are subject to German copyright law."
   },
   "contact": {
-    "header": "Contact",
+    "header": "Contact Me",
     "description": "Looking for a motivated frontend developer? Feel free to get in touch. I appreciate every message that gives me the opportunity to grow and take on new challenges.",
     "form": {
       "name-placeholder": "Your name",
