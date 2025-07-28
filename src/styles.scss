@@ -6,7 +6,14 @@
   text-decoration: none;
   scroll-behavior: smooth;
   font-family: "Robotomono";
+  max-width: 100%;
 }
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -15,6 +22,20 @@ body {
   padding-right: min(6rem, 5%);
   background: linear-gradient(180deg, #0b042d 11%, #1d0a79 49%, #13074e 71%);
   margin: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+section,
+div,
+main,
+article,
+aside,
+header,
+footer,
+nav {
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 @font-face {
@@ -93,4 +114,9 @@ p {
 
 .svg:hover .svg-orange {
   fill: #02f4bf;
+}
+
+a {
+  color:#e15544;
+  cursor: pointer;
 }
