@@ -1,0 +1,86 @@
+{
+  "navbar": {
+    "why-me": "Why Me",
+    "my-skills": "My Skills",
+    "my-projects": "My Projects",
+    "contact": "Contact"
+  },
+  "footer": {
+    "legal-notice": "Legal Notice",
+    "privacy-policy": "Privacy Policy",
+    "frontend-developer": "Frontend Developer",
+    "copyright": "© Tony Hirschligau 2025"
+  },
+  "hero-section": {
+    "Kontakt": "Contact"
+  },
+  "why-me": {
+    "header": "Why Me",
+    "description": "What drives me is turning concepts into something functional. I enjoy structuring logic, understanding processes, and implementing them in a way that users can actually work with. For me, it’s not enough for an application to simply exist, it needs to be practical and truly usable. Through my career change, I entered development with genuine ambition, eager to learn, focused, and determined to continuously improve. I work calmly, thoughtfully, and with a solution-oriented mindset. No unnecessary extras, just clear functionality.",
+    "i-am": "I am",
+    "located-in": "located in",
+    "open-to-challenges": "open to new challenges.",
+    "open-to-remote": "open to work remote.",
+    "lets-talk": "Let's talk!"
+  },
+  "my-skills": {
+    "header": "My Skills",
+    "challenge-me": "I am constantly learning new technologies and keeping up with the latest trends in web development.",
+    "hidden-text": "I'm happy to expand my knowledge towards backend development."
+  },
+  "my-projects": {
+    "header": "My Projects",
+    "projects": {
+      "join": {
+        "description": "JOIN is a web-based organization tool inspired by the Kanban system. It allows you to create tasks, share them with colleagues or friends, and manage them collaboratively. The app also includes a contact overview with clearly structured information. On the summary page, you're greeted personally and get a compact view of your upcoming tasks."
+      },
+      "el-pollo-loco": {
+        "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      }
+    }
+  },
+  "project": {
+    "github": "GitHub",
+    "live-test": "Live test"
+  },
+  "my-feedbacks": {
+    "header": "Feedback",
+    "teamplayer-full": "Looking for a team player? This is what colleagues say about me",
+    "teamplayer": "Looking for a team player?",
+    "colleagues-said": "This is what colleagues say about me",
+    "feedback": {
+      "anne-dalchow": "Working with Tony on the JOIN project was enriching for me in every respect. Both professionally and personally, our collaboration was excellent. Tony impresses with his pronounced team spirit, calm, focused way of working and clear, structured thinking. I particularly appreciated the professional exchange with him. You can discuss technical challenges very well with him and work out well-thought-out solutions together. I always felt comfortable and motivated when working with Tony and would be very happy to work with him again.",
+      "coming-soon": "Coming soon..."
+    }
+  },
+  "legal-notice": {
+    "title": "Legal Notice",
+    "info-according-tmg": "Information according to § 5 TMG:",
+    "contact": "Contact:",
+    "phone": "Phone: 0175 2361337",
+    "email": "Email:",
+    "responsible-content": "Responsible for content according to § 55 Abs. 2 RStV:",
+    "liability-content-title": "Liability for content:",
+    "liability-content-text": "As a service provider, we are responsible for our own content on these pages according to general laws in accordance with § 7 para. 1 TMG. According to §§ 8 to 10 TMG, however, we as service providers are not obligated to monitor transmitted or stored third-party information.",
+    "liability-links-title": "Liability for links:",
+    "liability-links-text": "Our offer contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this external content.",
+    "copyright-title": "Copyright:",
+    "copyright-text": "The content and works created by the site operators on these pages are subject to German copyright law."
+  },
+  "contact": {
+    "header": "Contact",
+    "description": "Looking for a motivated frontend developer? Feel free to get in touch. I appreciate every message that gives me the opportunity to grow and take on new challenges.",
+    "form": {
+      "name-placeholder": "Your name",
+      "name-error": "Your name is required",
+      "email-placeholder": "Your email",
+      "email-error": "Your email is required",
+      "message-placeholder": "Your message",
+      "message-error": "Message is required",
+      "privacy-text": "I've read the",
+      "privacy-link": "privacy policy",
+      "privacy-agree": "and agree to the processing of my data as outlined.",
+      "send-button": "Send"
+    }
+  }
+}

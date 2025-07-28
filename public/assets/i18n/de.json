@@ -1,0 +1,82 @@
+{
+  "navbar": {
+    "why-me": "Warum ich",
+    "my-skills": "Fähigkeiten",
+    "my-projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "legal-notice": "Impressum",
+    "privacy-policy": "Datenschutzerklärung",
+    "frontend-developer": "Frontend Entwickler",
+    "copyright": "© Tony Hirschligau 2025"
+  },
+  "hero-section": {
+    "Kontakt": "Kontakt"
+  },
+  "why-me": {
+    "header": "Warum ich",
+    "description": "Was mich antreibt, ist die Idee, aus einem Konzept etwas Funktionierendes zu machen. Ich mag es, Logik zu strukturieren, Abläufe zu verstehen und so umzusetzen, dass Nutzer:innen damit wirklich arbeiten können. Für mich zählt, dass eine Anwendung nicht nur existiert, sondern sinnvoll genutzt werden kann. Durch meine Umschulung bin ich mit echtem Ehrgeiz in die Entwicklung gestartet, wissbegierig, fokussiert und bereit, mich stetig weiterzuentwickeln. Ich arbeite ruhig, durchdacht und lösungsorientiert. Kein Schnickschnack, lieber klare Funktionalität.",
+    "i-am": "Ich bin",
+    "located-in": "wohnhaft in",
+    "open-to-challenges": "offen für Neues",
+    "open-to-remote": "offen für HomeOffice",
+    "lets-talk": "Kontaktiere mich!"
+  },
+  "my-skills": {
+    "header": "Meine Fähigkeiten",
+    "challenge-me": "Ich lerne ständig neue Technologien und halte mich über die neuesten Trends in der Webentwicklung auf dem Laufenden.",
+    "hidden-text": "Ich freue mich, mein Wissen in Richtung Backend zu erweitern."
+  },
+  "my-projects": {
+    "header": "Meine Projekte",
+    "projects": {
+      "join": {
+        "description": "JOIN ist ein webbasiertes Organisationstool, das auf dem Kanban-Prinzip basiert. Es ermöglicht dir, Aufgaben zu erstellen, mit Kolleg:innen oder Freund:innen zu teilen und gemeinsam zu organisieren. Zusätzlich bietet es eine Kontaktübersicht mit klar strukturierten Informationen zu den jeweiligen Personen. Auf der Übersichtsseite wirst du persönlich begrüßt und erhältst eine kompakte Darstellung deiner anstehenden Aufgaben."
+      },
+      "el-pollo-loco": {
+        "description": "Spring-, Lauf- und Wurfspiel basierend auf objektorientiertem Ansatz. Helfen Sie Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+      }
+    }
+  },
+  "my-feedbacks": {
+    "header": "Feedback",
+    "teamplayer-full": "Teamplayer gesucht? Das sagen Kollegen über mich",
+    "teamplayer": "Teamplayer gesucht?",
+    "colleagues-said": "Das sagen Kollegen über mich",
+    "feedback": {
+      "anne-dalchow": "Die Zusammenarbeit mit Tony im Rahmen des JOIN-Projekts war für mich in jeder Hinsicht bereichernd. Fachlich wie menschlich hat unsere Zusammenarbeit hervorragend harmoniert. Tony überzeugt durch einen ausgeprägten Teamgeist, eine ruhige, konzentrierte Arbeitsweise und eine klare, strukturierte Denkweise. Besonders geschätzt habe ich den fachlichen Austausch mit ihm. Man kann sich mit ihm sehr gut über technische Herausforderungen austauschen und gemeinsam durchdachte Lösungen erarbeiten. Ich habe mich in der Zusammenarbeit mit Tony immer wohl und gleichzeitig motiviert gefühlt und würde mich sehr freuen, wieder mit ihm zusammenzuarbeiten.",
+      "coming-soon": "Bald verfügbar..."
+    }
+  },
+  "legal-notice": {
+    "title": "Impressum",
+    "info-according-tmg": "Angaben gemäß § 5 TMG:",
+    "contact": "Kontakt:",
+    "phone": "Telefon: 0175 2361337",
+    "email": "E-Mail:",
+    "responsible-content": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:",
+    "liability-content-title": "Haftung für Inhalte:",
+    "liability-content-text": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.",
+    "liability-links-title": "Haftung für Links:",
+    "liability-links-text": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.",
+    "copyright-title": "Urheberrecht:",
+    "copyright-text": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht."
+  },
+  "contact": {
+    "header": "Kontakt",
+    "description": "Du suchst einen motivierten Frontend-Entwickler? Dann schreib mir gern direkt. Ich freue mich über jede Nachricht, die mir die Chance gibt, mich weiterzuentwickeln und neue Herausforderungen anzugehen.",
+    "form": {
+      "name-placeholder": "Ihr Name",
+      "name-error": "Name ist erforderlich",
+      "email-placeholder": "Ihre E-Mail",
+      "email-error": "E-Mail ist erforderlich",
+      "message-placeholder": "Ihre Nachricht",
+      "message-error": "Nachricht erforderlich",
+      "privacy-text": "Ich habe die",
+      "privacy-link": "Datenschutzerklärung",
+      "privacy-agree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "send-button": "Nachricht senden :)"
+    }
+  }
+}
