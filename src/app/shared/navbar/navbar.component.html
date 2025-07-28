@@ -1,14 +1,39 @@
 <div class="nav-wrapper">
   <nav>
     <div class="navigation">
-      <li class="logo"><a (click)="setAnchorTo('home')" id="logo">&lt;TH&gt;</a></li>
-      <li><a (click)="setAnchorTo('why-me')">Why me</a></li>
-      <li><a (click)="setAnchorTo('my-skills')">Skills</a></li>
-      <li><a (click)="setAnchorTo('my-projects')">Project</a></li>
-      <li><a (click)="setAnchorTo('contact')">Contact</a></li>
+      <li class="logo">
+        <a (click)="setAnchorTo('home')" routerLink="/home" id="logo"
+          >&lt;TH&gt;</a
+        >
+      </li>
+      <li>
+        <a (click)="setAnchorTo('why-me')" style="cursor: pointer">{{
+          "navbar.why-me" | translate
+        }}</a>
+      </li>
+      <li>
+        <a (click)="setAnchorTo('my-skills')" style="cursor: pointer">{{
+          "navbar.my-skills" | translate
+        }}</a>
+      </li>
+      <li>
+        <a (click)="setAnchorTo('my-projects')" style="cursor: pointer">{{
+          "navbar.my-projects" | translate
+        }}</a>
+      </li>
+      <li>
+        <a (click)="setAnchorTo('contact')" style="cursor: pointer">{{
+          "navbar.contact" | translate
+        }}</a>
+      </li>
     </div>
     <div class="translation">
-      <li><a href="">DE</a>|<a href="">EN</a></li>
+      <li>
+        <a (click)="switchLanguage('de'); $event.preventDefault()">DE</a>|<a
+          (click)="switchLanguage('en'); $event.preventDefault()"
+          >EN</a
+        >
+      </li>
     </div>
   </nav>
   <div class="burger-menu-container" (click)="openMobileMenu()">
@@ -41,39 +66,59 @@
   </div>
   @if (isMobileOpen) {
 
-    <div class="mobile-nav" (click)="$event.stopPropagation()">
-      <div class="close-svg-container">
-        <svg
-          width="35"
-          height="32"
-          viewBox="0 0 35 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          (click)="closeMobileMenu()"
-        >
-          <path
-            d="M6.99997 5.00024L27.6506 26.7615"
-            stroke="#E15544"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M7 27L27.46 5.05939"
-            stroke="#E15544"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
-      </div>
-      <li><a (click)="setAnchorTo('why-me')">Why me</a></li>
-      <li><a (click)="setAnchorTo('my-skills')">Skills</a></li>
-      <li><a (click)="setAnchorTo('my-projects')">Project</a></li>
-      <li><a (click)="setAnchorTo('contact')">Contact</a></li>
-      <div class="translation">
-        <li><a href="">DE</a>|<a href="">EN</a></li>
-      </div>
+  <div class="mobile-nav" (click)="$event.stopPropagation()">
+    <div class="close-svg-container">
+      <svg
+        width="35"
+        height="32"
+        viewBox="0 0 35 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        (click)="closeMobileMenu()"
+      >
+        <path
+          d="M6.99997 5.00024L27.6506 26.7615"
+          stroke="#E15544"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <path
+          d="M7 27L27.46 5.05939"
+          stroke="#E15544"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
     </div>
-
+    <li>
+      <a (click)="setAnchorTo('why-me')" style="cursor: pointer">{{
+        "navbar.why-me" | translate
+      }}</a>
+    </li>
+    <li>
+      <a (click)="setAnchorTo('my-skills')" style="cursor: pointer">{{
+        "navbar.my-skills" | translate
+      }}</a>
+    </li>
+    <li>
+      <a (click)="setAnchorTo('my-projects')" style="cursor: pointer">{{
+        "navbar.my-projects" | translate
+      }}</a>
+    </li>
+    <li>
+      <a (click)="setAnchorTo('contact')" style="cursor: pointer">{{
+        "navbar.contact" | translate
+      }}</a>
+    </li>
+    <div class="translation">
+      <li>
+        <a (click)="switchLanguage('de'); $event.preventDefault()">DE</a>|<a
+          (click)="switchLanguage('en'); $event.preventDefault()"
+          >EN</a
+        >
+      </li>
+    </div>
+  </div>
 
   }
 </div>
