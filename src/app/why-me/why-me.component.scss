@@ -78,7 +78,10 @@ section {
 }
 
 .content-left-site {
-  height: 50vh;
+  height: auto;
+  max-height: 452px;
+  width: 30%;
+  min-width: 323px;
 
   @media (max-width: 960px) {
     width: clamp(3rem, 40vw, 40rem);
