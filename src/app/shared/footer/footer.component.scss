@@ -1,14 +1,20 @@
-section {
-  height: 12.25rem;
-  align-items: center;
-  justify-content: space-between;
-}
+:host {
+  display: block;
 
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 13rem;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 850px) {
+      flex-direction: column-reverse;
+      gap: 4rem;
+      height: auto;
+    }
+  }
 }
 
 .svg:hover .svg-orange {
@@ -54,10 +60,39 @@ section {
 
 .sozial-link-container {
   display: flex;
-  gap: 1.875rem;
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
 a {
   color: #e15544;
   font-size: 0.875rem;
+}
+
+.mobile-copyright {
+  display: none;
+}
+
+.link-container-mobile {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .middle-container {
+    display: none;
+  }
+  .mobile-copyright {
+    display: block;
+  }
+  .frontend-developer {
+    display: none;
+  }
+  .link-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-container {
+    margin-top: 0;
+  }
 }
