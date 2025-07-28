@@ -1,6 +1,9 @@
 .contact-wrapper {
   max-width: 1440px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .header-container {
@@ -11,6 +14,12 @@
       margin-bottom: -3.125rem;
       margin-left: 1.563rem;
     }
+    @media (max-width: 930px) {
+      display: none;
+    }
+  }
+  @media (max-width: 930px) {
+    justify-content: center;
   }
 }
 
@@ -18,6 +27,10 @@
   display: flex;
   gap: 3.125rem;
   margin-top: 1.25rem;
+  @media (max-width: 930px) {
+    gap: 0;
+    justify-content: center;
+  }
 }
 
 .tel-container {
@@ -27,6 +40,9 @@
   &:hover {
     cursor: pointer;
   }
+  @media (max-width: 930px) {
+    flex-direction: column;
+  }
 }
 .email-container {
   display: flex;
@@ -35,6 +51,11 @@
   width: 80%;
   &:hover {
     cursor: pointer;
+  }
+  @media (max-width: 930px) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -46,6 +67,9 @@
     &:visited {
       color: #02f4bf;
       text-decoration: #02f4bf solid;
+    }
+    @media (max-width: 930px) {
+      font-size: clamp(0.9rem, 2vw, 1.5rem);
     }
   }
 }
@@ -60,9 +84,12 @@
 
 .email-link-container {
   > a {
-    font-size: 1.25rem;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
     font-weight: 500;
     color: #02f4bf;
+    // @media (max-width: 930px) {
+    //   font-size: 1rem;
+    // }
 
     &:visited {
       color: #02f4bf;
@@ -96,27 +123,43 @@
 .form-container {
   display: flex;
   gap: 1.875rem;
+  height: 15vh;
+  @media (max-width: 930px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    height: 100%;
+  }
 }
 
 .policy-container {
   display: flex;
   gap: 1.25rem;
+  @media (max-width: 930px) {
+    margin-bottom: 1rem;
+  }
 }
 
 form {
-  margin-top: 3.125rem;
+  // margin-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .name-mail-container {
   display: flex;
   flex-direction: column;
-  gap: 0.313rem;
+  gap: 1rem;
   width: 50%;
+  justify-content: space-between;
   > input {
     border: 1.5px solid #02f4bf;
     width: 100%;
     height: 3.5rem;
-    padding: 1.563rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
     color: #02f4bf;
     background-color: transparent;
     &::placeholder {
@@ -126,6 +169,21 @@ form {
     &.ng-invalid.ng-touched::placeholder {
       opacity: 0;
     }
+
+    // Autofill-Styles überschreiben
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+      -webkit-text-fill-color: #02f4bf !important;
+      background-color: transparent !important;
+      border: 1.5px solid #02f4bf !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+  @media (max-width: 930px) {
+    width: 100%;
   }
 }
 
@@ -134,7 +192,7 @@ form {
     border: 1.5px solid #02f4bf;
     width: 100%;
     height: 3.5rem;
-    padding: 1.563rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
     color: #02f4bf;
     background: transparent;
     &::placeholder {
@@ -144,14 +202,26 @@ form {
     &.ng-invalid.ng-touched::placeholder {
       opacity: 0;
     }
+
+    // Autofill-Styles überschreiben
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+      -webkit-text-fill-color: #02f4bf !important;
+      background-color: transparent !important;
+      border: 1.5px solid #02f4bf !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 }
 
 #message {
   border: 1.5px solid #02f4bf;
   width: 100%;
-  height: 9rem;
-  padding: 1.563rem;
+  height: 100%;
+  padding: clamp(1rem, 2vw, 1.5rem);
   color: #02f4bf;
   background-color: transparent;
   &::placeholder {
@@ -161,11 +231,30 @@ form {
   &.ng-invalid.ng-touched::placeholder {
     opacity: 0;
   }
+
+  // Autofill-Styles überschreiben
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    -webkit-text-fill-color: #02f4bf !important;
+    background-color: transparent !important;
+    border: 1.5px solid #02f4bf !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }
 
 span {
   color: #02f4bf;
   width: 50%;
+  @media (max-width: 930px) {
+    width: 100%;
+  }
+}
+
+.information-text {
+  text-align: center;
 }
 
 .checkbox-container {
@@ -213,6 +302,9 @@ span {
   justify-content: flex-end;
   max-width: 100%;
   height: auto;
+  @media (max-width: 930px) {
+    justify-content: center;
+  }
 }
 
 .btn-disabled {
@@ -269,7 +361,7 @@ input {
 .invalid-message {
   justify-content: space-between;
   position: absolute;
-  top: 1.563rem;
+  top: 1rem;
   left: 1.25rem;
   width: 12.5rem;
   color: red;
@@ -327,6 +419,9 @@ input {
 
 .message-container {
   width: 50%;
+  @media (max-width: 930px) {
+    width: 100%;
+  }
 }
 
 .contact-info-container {
@@ -334,23 +429,74 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 930px) {
+    display: none;
+  }
 }
 
 .tel-svg-wrapper {
   display: flex;
   justify-content: space-between;
-  .home-svg-container {
-    padding: 0.3rem;
-    height: 60px;
+}
+
+.home-svg-wrapper {
+  display: none;
+  @media (max-width: 930px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.home-svg-container {
+  padding: 0.3rem;
+  height: 60px;
+  svg {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    border: 1px solid #02f4bf;
+    cursor: pointer;
+    @media (max-width: 930px) {
+      border: none;
+    }
+  }
+  &:hover .svg-arrow {
+    fill: #02f4bf;
+    @media (max-width: 930px) {
+      fill: #e15544;
+    }
+  }
+  @media (max-width: 930px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.contact-info-container-mobile {
+  display: none;
+  @media (max-width: 930px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.home-svg-container-mobile {
+  display: none;
+  @media (max-width: 930px) {
+    display: flex;
+    justify-content: flex-end;
     svg {
       transform: rotate(180deg);
     }
-    &:hover {
-      border: 1px solid #02f4bf;
-      cursor: pointer;
-    }
-    &:hover .svg-arrow {
-      fill: #02f4bf;
-    }
+  }
+}
+
+@media (max-width: 930px) {
+  p {
+    font-size: clamp(0.8rem, 2vw, 1rem);
   }
 }

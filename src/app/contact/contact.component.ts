@@ -2,13 +2,14 @@ import { NgIf, ViewportScroller } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { Router, RouterLink } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 let email: string;
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, NgIf, TranslateModule],
+  imports: [FormsModule, NgIf, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -17,7 +18,7 @@ export class ContactComponent {
   isFocused: { [key: string]: boolean } = {};
   privacyAccepted: boolean = false;
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(private viewportScroller: ViewportScroller, private translate: TranslateService, private router: Router) {}
   mailTest = false;
   http = inject(HttpClient);
   setAnchorTo(anchor: string): void {
@@ -77,5 +78,18 @@ export class ContactComponent {
       console.log('Form valid:', ngForm.form.valid);
       console.log('Form submitted:', ngForm.submitted);
     }
+  }
+
+  getPrivacyPolicyRoute(): string {
+    const currentLang =
+      this.translate.currentLang || this.translate.defaultLang || 'en';
+    return currentLang === 'de' ? '/privacy-policy-de' : '/privacy-policy-en';
+  }
+
+  onPrivacyPolicyClick(): void {
+    const route = this.getPrivacyPolicyRoute();
+    this.router.navigate([route]).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 }

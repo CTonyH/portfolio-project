@@ -1,18 +1,15 @@
 <section id="contact">
   <div class="contact-wrapper">
     <div class="header-container">
-      <h2>Contact Me</h2>
+      <h2>{{ "contact.header" | translate }}</h2>
       <div>
         <img src="/assets/images/contact-arrow.png" alt="Arrow" />
       </div>
     </div>
 
     <div class="information-container">
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat quo
-        dolor odio, architecto nulla, non doloremque, accusantium corporis
-        voluptate inventore neque quibusdam nemo repellendus? Consectetur atque
-        eveniet ducimus soluta deleniti!
+      <span class="information-text">
+        {{ "contact.description" | translate }}
       </span>
       <div class="contact-info-container">
         <div class="email-container">
@@ -46,41 +43,43 @@
               <a href="tel:+491752361337">Tel: 0175 236 1337</a>
             </div>
           </div>
-              <div class="home-svg-container">
-                <svg
-          width="22"
-          height="50"
-          viewBox="0 0 22 50"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          (click)="setAnchorTo('home')"
-                >
-          <path
-            class="svg-arrow"
-            d="M12.4142 45.0634L19.3265 38.7604C19.7082 38.4123 20.2923 38.4123 20.6741 38.7604L21.1897 39.2306C21.6246 39.6272 21.6246 40.3118 21.1897 40.7084L11.6738 49.3856C11.292 49.7337 10.708 49.7337 10.3262 49.3856L0.810336 40.7084C0.375396 40.3118 0.375396 39.6272 0.810337 39.2306L1.32595 38.7604C1.7077 38.4123 2.29178 38.4123 2.67354 38.7604L9.58575 45.0634L9.58575 1C9.58575 0.447717 10.0335 0 10.5858 0L11.4142 0C11.9665 0 12.4142 0.447715 12.4142 1L12.4142 45.0634Z"
-            fill="#E15544"
-          />
-                </svg>
-              </div>
+          <div class="home-svg-container">
+            <svg
+              width="22"
+              height="50"
+              viewBox="0 0 22 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              (click)="setAnchorTo('home')"
+            >
+              <path
+                class="svg-arrow"
+                d="M12.4142 45.0634L19.3265 38.7604C19.7082 38.4123 20.2923 38.4123 20.6741 38.7604L21.1897 39.2306C21.6246 39.6272 21.6246 40.3118 21.1897 40.7084L11.6738 49.3856C11.292 49.7337 10.708 49.7337 10.3262 49.3856L0.810336 40.7084C0.375396 40.3118 0.375396 39.6272 0.810337 39.2306L1.32595 38.7604C1.7077 38.4123 2.29178 38.4123 2.67354 38.7604L9.58575 45.0634L9.58575 1C9.58575 0.447717 10.0335 0 10.5858 0L11.4142 0C11.9665 0 12.4142 0.447715 12.4142 1L12.4142 45.0634Z"
+                fill="#E15544"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
-    <form #contactForm="ngForm">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="form-container">
         <div class="name-mail-container">
           <input
             name="name"
             type="text"
-            placeholder="Your Name"
+            placeholder="{{ 'contact.form.name-placeholder' | translate }}"
             required
             minlength="3"
             #name="ngModel"
-            ngModel
+            [(ngModel)]="contactData.name"
             (focus)="isFocused['name'] = true"
             (blur)="isFocused['name'] = false"
           />
           @if (name.invalid && name.touched && !isFocused['name']) {
-          <span class="invalid-name">Your name is required </span>
+          <span class="invalid-name">{{
+            "contact.form.name-error" | translate
+          }}</span>
           } @if (name.invalid && name.touched) {
           <img
             class="invalid-image"
@@ -94,21 +93,23 @@
             alt=""
           />
           }
-          <br />
+
           <div class="mail-container">
             <input
               name="email"
               type="email"
-              placeholder="Your Email"
+              placeholder="{{ 'contact.form.email-placeholder' | translate }}"
               #email="ngModel"
               required
               email
-              ngModel
+              [(ngModel)]="contactData.email"
               (focus)="isFocused['email'] = true"
               (blur)="isFocused['email'] = false"
             />
             @if (email.invalid && email.touched && !isFocused['email']) {
-            <span class="invalid-mail">Your E-Mail is required </span>
+            <span class="invalid-mail">{{
+              "contact.form.email-error" | translate
+            }}</span>
             } @if (email.invalid && email.touched) {
             <img
               class="invalid-image"
@@ -122,25 +123,25 @@
             />
             }
           </div>
-          <br />
         </div>
         <div class="message-container">
           <textarea
             name="message"
             id="message"
-            placeholder="Your Message"
+            placeholder="{{ 'contact.form.message-placeholder' | translate }}"
             minlength="10"
             maxlength="500"
-            ngModel
+            [(ngModel)]="contactData.message"
             required
             #message="ngModel"
-            message
             (focus)="isFocused['message'] = true"
             (blur)="isFocused['message'] = false"
           ></textarea>
           @if (message.invalid && message.touched && !isFocused['message']) {
-          <span class="invalid-message">Please enter message </span>} @if
-          (message.invalid && message.touched) {
+          <span class="invalid-message">{{
+            "contact.form.message-error" | translate
+          }}</span
+          >} @if (message.invalid && message.touched) {
           <img
             class="invalid-image"
             src="/assets/images/invalidinput.png"
@@ -156,7 +157,7 @@
           }
         </div>
       </div>
-      <br />
+
       <div class="policy-container">
         <div class="checkbox-container">
           <input
@@ -164,25 +165,77 @@
             required
             [(ngModel)]="privacyAccepted"
             name="privacy"
-            ngModel
           />
         </div>
         <div>
           <p>
-            I've read the <a class="policy-link" href=""> privacy policy</a> and
-            agree to the processing of my data as outlined.
+            {{ "contact.form.privacy-text" | translate }}
+            <a (click)="onPrivacyPolicyClick()" class="policy-link">{{
+              "contact.form.privacy-link" | translate
+            }}</a>
+            {{ "contact.form.privacy-agree" | translate }}
           </p>
         </div>
       </div>
       <div class="submit-container">
         <input
           type="submit"
-          value="Send"
+          value="{{ 'contact.form.send-button' | translate }}"
           [disabled]="!(privacyAccepted && contactForm.valid)"
           [class.btn-disabled]="!(privacyAccepted && contactForm.valid)"
           [class.btn-enabled]="privacyAccepted && contactForm.valid"
         />
       </div>
     </form>
+    <div class="home-svg-container-mobile">
+      <svg
+        width="22"
+        height="50"
+        viewBox="0 0 22 50"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        (click)="setAnchorTo('home')"
+      >
+        <path
+          class="svg-arrow"
+          d="M12.4142 45.0634L19.3265 38.7604C19.7082 38.4123 20.2923 38.4123 20.6741 38.7604L21.1897 39.2306C21.6246 39.6272 21.6246 40.3118 21.1897 40.7084L11.6738 49.3856C11.292 49.7337 10.708 49.7337 10.3262 49.3856L0.810336 40.7084C0.375396 40.3118 0.375396 39.6272 0.810337 39.2306L1.32595 38.7604C1.7077 38.4123 2.29178 38.4123 2.67354 38.7604L9.58575 45.0634L9.58575 1C9.58575 0.447717 10.0335 0 10.5858 0L11.4142 0C11.9665 0 12.4142 0.447715 12.4142 1L12.4142 45.0634Z"
+          fill="#E15544"
+        />
+      </svg>
+    </div>
+    <div class="contact-info-container-mobile">
+      <div class="email-container">
+        <div>
+          <img
+            class="icon-email"
+            src="assets/images/icon-email.png"
+            alt="E-Mail"
+          />
+          <img class="hover-mail" src="assets/images/hover-mail.png" alt="" />
+        </div>
+        <div class="email-link-container">
+          <a href="mailto: + email">{{ this.email }}</a>
+        </div>
+      </div>
+      <div class="tel-svg-wrapper">
+        <div class="tel-container">
+          <div>
+            <img
+              class="icon-phone"
+              src="/assets/images/icon-phone.png"
+              alt="telefon"
+            />
+            <img
+              class="hover-phone"
+              src="/assets/images/hover-phone.png"
+              alt="telefon"
+            />
+          </div>
+          <div class="phone-number-container">
+            <a href="tel:+491752361337">0175 236 1337</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
