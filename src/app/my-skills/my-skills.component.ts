@@ -1,14 +1,14 @@
 import { Component, HostListener } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-skills',
-  imports: [],
+  imports: [TranslateModule],
   standalone: true,
   templateUrl: './my-skills.component.html',
-  styleUrl: './my-skills.component.scss'
+  styleUrl: './my-skills.component.scss',
 })
 export class MySkillsComponent {
-
   isDesktop: boolean = false;
 
   ngOnInit() {
@@ -27,5 +27,4 @@ export class MySkillsComponent {
   get isMobile() {
     return !this.isDesktop;
   }
-
 }

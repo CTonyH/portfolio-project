@@ -88,7 +88,7 @@ h2 {
   width: 100%;
   justify-items: center;
   align-items: center;
-  @media (max-width: 860px) {
+  @media (max-width: 920px) {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem 1rem;
   }
@@ -116,5 +116,21 @@ figcaption {
   gap: 0.5rem;
   @media (max-width: 768px) {
     display: flex;
+  }
+}
+
+.mobile-text-challengeme {
+  display: none;
+}
+
+@media (max-width: 490px) {
+  .mobile-text-challengeme {
+    display: none;
+  }
+  .challengeme-text {
+    display: none;
+  }
+  figcaption {
+    display: none;
   }
 }

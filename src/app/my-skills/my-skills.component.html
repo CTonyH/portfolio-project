@@ -1,6 +1,6 @@
 <section id="my-skills">
   <div class="content">
-    <h2>My Skills</h2>
+    <h2>{{ "my-skills.header" | translate }}</h2>
     <div class="skills-container">
       <div class="display-flex">
         <figure>
@@ -65,18 +65,21 @@
       <div class="challengeme-container">
         <figure>
           <img src="/assets/images/challengeme.png" alt="Challenge Me" />
-          <figcaption>Challenge Me</figcaption>
+          <figcaption class="challengeme-text">
+            Challenge Me
+          </figcaption>
         </figure>
-      </div>  
-      <span class="hidden-text"
-        >I'm open to learn new things. Most intrested in Back-End
-      </span>
+      </div>
+      <span class="hidden-text">{{ "my-skills.hidden-text" | translate }}</span>
+      <span class="mobile-text-challengeme">{{
+        "my-skills.challenge-me" | translate
+      }}</span>
     </div>
     <div class="mobile-challengeme-container">
-      <img src="/assets/images/mobile-arrow-myskills.svg" alt="">
-       <span class="hidden-text-mobile"
-        >I'm open to learn new things. Most intrested in Back-End
-      </span>
+      <img src="/assets/images/mobile-arrow-myskills.svg" alt="" />
+      <span class="hidden-text-mobile">{{
+        "my-skills.hidden-text" | translate
+      }}</span>
     </div>
   </div>
 </section>
