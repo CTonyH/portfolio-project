@@ -5,20 +5,18 @@
     </div>
     <div class="content-right-site">
       <div class="title-container">
-        <h2>Why Me</h2>
+        <div class="title">
+          <h2>{{ "why-me.header" | translate }}</h2>
+        </div>
       </div>
       <div class="text-container">
         <p class="responsive-style">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-          maiores repellendus cupiditate a excepturi nobis atque obcaecati.
-          Maxime dolores beatae corrupti praesentium voluptates natus, odit
-          dolorem ab, laboriosam, ipsa libero.
+          {{ "why-me.description" | translate }}
         </p>
       </div>
       <div class="i-am-container">
         <div class="first-row">
-          <h2>I am</h2>
-          <!-- @if (isMobile) {
+          <h2>{{ "why-me.i-am" | translate }}</h2>
           <div class="arrow-icon-mobile">
             <svg
               width="27"
@@ -33,37 +31,38 @@
               />
             </svg>
           </div>
-          } -->
           <div class="located-container">
-            <img
-              class="location-image"
-              src="/assets/images/location1.png"
-              alt=""
-            />
-            <svg
-              class="hover-location"
-              width="34"
-              height="51"
-              viewBox="0 0 34 51"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 17.0423C0 25.2266 9.33767 35.1965 16.7174 41C23.1935 35.6429 32.6064 27.0866 33.2842 17.0423C33.796 9.45643 27.3352 -0.219418 16.7174 0.00379216C3.99109 0.271327 0 10.2715 0 17.0423Z"
-                fill="#02F4BF"
+            <div class="location-hover-svg-wrapper">
+              <img
+                class="location-image"
+                src="/assets/images/location1.png"
+                alt=""
               />
-              <path
-                d="M20.5319 15.1473C20.4642 17.3487 18.7087 19.0823 16.6109 19.0194C14.5131 18.9565 12.8673 17.1208 12.9351 14.9194C13.0028 12.718 14.7584 10.9843 16.8562 11.0473C18.954 11.1102 20.5997 12.9458 20.5319 15.1473Z"
-                fill="#E15544"
-              />
-              <path
-                d="M22.9378 43C29.7553 46.6522 24.1052 50 16.5747 50C9.04423 50 3.3941 46.3478 9.75715 43"
-                stroke="#02F4BF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-            <p>located in Gera</p>
+              <svg
+                class="hover-location"
+                width="34"
+                height="51"
+                viewBox="0 0 34 51"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 17.0423C0 25.2266 9.33767 35.1965 16.7174 41C23.1935 35.6429 32.6064 27.0866 33.2842 17.0423C33.796 9.45643 27.3352 -0.219418 16.7174 0.00379216C3.99109 0.271327 0 10.2715 0 17.0423Z"
+                  fill="#02F4BF"
+                />
+                <path
+                  d="M20.5319 15.1473C20.4642 17.3487 18.7087 19.0823 16.6109 19.0194C14.5131 18.9565 12.8673 17.1208 12.9351 14.9194C13.0028 12.718 14.7584 10.9843 16.8562 11.0473C18.954 11.1102 20.5997 12.9458 20.5319 15.1473Z"
+                  fill="#E15544"
+                />
+                <path
+                  d="M22.9378 43C29.7553 46.6522 24.1052 50 16.5747 50C9.04423 50 3.3941 46.3478 9.75715 43"
+                  stroke="#02F4BF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <p>{{ "why-me.located-in" | translate }} Gera</p>
           </div>
         </div>
         <div class="second-row">
@@ -119,7 +118,7 @@
                 </svg>
               </div>
               <div>
-                <p>open to new challenges</p>
+                <p>{{ "why-me.open-to-challenges" | translate }}</p>
               </div>
             </div>
           </div>
@@ -175,7 +174,7 @@
               </svg>
             </div>
             <div>
-              <p>open to work remote</p>
+              <p>{{ "why-me.open-to-remote" | translate }}</p>
             </div>
             <div class="arrow-icon">
               <svg
@@ -210,7 +209,6 @@
           </div>
         </div>
       </div>
-      <!-- @if (isMobile) {
       <div class="arrow-icon-mobile-second">
         <svg
           width="27"
@@ -225,9 +223,8 @@
           />
         </svg>
       </div>
-      } -->
-      <div>
-        <button class="btn-2">Let's Talk</button>
+      <div class="button-container">
+        <button (click)="setAnchorTo('contact')" class="btn-2">{{ "why-me.lets-talk" | translate }}</button>
       </div>
     </div>
   </div>
