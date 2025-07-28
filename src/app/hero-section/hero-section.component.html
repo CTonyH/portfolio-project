@@ -2,7 +2,9 @@
   <div class="content">
     <div class="txt-btn-container">
       <div class="btn-container">
-        <button (click)="setAnchorTo('contact')" class="btn-1 vertical-button">CONTACT ME</button>
+        <button (click)="setAnchorTo('contact')" class="btn-1 vertical-button">
+          {{ "hero-section.Kontakt" | translate }}
+        </button>
         <div (click)="setAnchorTo('why-me')" class="svg-container">
           <svg
             width="22"
@@ -10,7 +12,6 @@
             viewBox="0 0 22 50"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            
           >
             <path
               class="svg-arrow"
