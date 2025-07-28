@@ -21,14 +21,12 @@ export class NavbarComponent {
   isMobileOpen: boolean = false;
 
   setAnchorTo(anchor: string): void {
-    // Prüfe ob wir bereits auf der Home-Seite sind
+
     if (this.router.url === '/home' || this.router.url === '/') {
-      // Direkt zur Sektion scrollen
+
       this.viewportScroller.scrollToAnchor(anchor);
     } else {
-      // Erst zur Home-Seite navigieren, dann zur Sektion scrollen
       this.router.navigate(['/home']).then(() => {
-        // Kurz warten, damit die Seite geladen ist
         setTimeout(() => {
           this.viewportScroller.scrollToAnchor(anchor);
         }, 100);
@@ -38,7 +36,6 @@ export class NavbarComponent {
 
   switchLanguage(language: string): void {
     this.translate.use(language);
-    console.log('Sprache gewechselt zu:', language); // Debug-Ausgabe
   }
 
   closeMobileMenu(): void {
