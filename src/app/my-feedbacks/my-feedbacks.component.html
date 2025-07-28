@@ -1,7 +1,13 @@
 <section class="my-feedbacks-wrapper">
   <div class="content">
     <div class="header-container">
-      <h4>Need a teamplayer? Here what my colleagues said about me</h4>
+      <h4>{{ "my-feedbacks.teamplayer-full" | translate }}</h4>
+    </div>
+    <div class="mobile-text">
+      <h4>{{ "my-feedbacks.teamplayer" | translate }}</h4>
+      <p>{{ "my-feedbacks.colleagues-said" | translate }}</p>
+    </div>
+    <div class="feedbacks-container">
       <svg
         width="72"
         height="86"
@@ -14,8 +20,6 @@
           fill="#E15544"
         />
       </svg>
-    </div>
-    <div class="feedbacks-container">
       @for (feedback of feedbacks; track $index) {
       <app-feedback [feedback]="feedback"></app-feedback>
       }

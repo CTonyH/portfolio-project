@@ -1,10 +1,15 @@
-  <div class="content">
-    <div class="header">
-      <h4>{{ feedback.name }}</h4>
-      <p>{{ feedback.project }}</p>
-    </div>
-    <div>
-      <p>"{{ feedback.singleFeedback }}"</p>
-    </div>
+<div class="content">
+  <div class="header">
+    <h4>{{ feedback.name }}</h4>
+    <p>{{ feedback.project }}</p>
   </div>
-
+  <div>
+    <p>
+      "{{
+        feedback.translationKey
+          ? (feedback.translationKey | translate)
+          : feedback.singleFeedback
+      }}"
+    </p>
+  </div>
+</div>

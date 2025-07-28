@@ -1,10 +1,34 @@
 .content {
   width: 100%;
+  height: 20vh;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  overflow-y: auto;
+  justify-content: flex-start;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+
+  @media (max-width: 811px) {
+    border: 1px solid #02f4bf;
+    padding: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  p {
+    @media (max-width: 811px) {
+      text-align: center;
+    }
+  }
 }
 
-
-
-
+@media (max-width: 811px) {
+  .header {
+    text-align: center;
+  }
+}
