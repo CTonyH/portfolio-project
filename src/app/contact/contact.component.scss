@@ -96,7 +96,7 @@
 .form-container {
   display: flex;
   gap: 1.875rem;
-  height: 15vh;
+  height: 17vh;
 }
 
 .policy-container {
@@ -221,6 +221,7 @@ form {
   flex-direction: column;
   gap: 2.3rem;
   width: 50%;
+  justify-content: space-between;
 
   > input {
     @extend %input-base;
