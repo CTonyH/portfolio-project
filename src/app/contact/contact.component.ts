@@ -19,7 +19,10 @@ export class ContactComponent {
   isFocused: { [key: string]: boolean } = {};
   privacyAccepted: boolean = false;
 
-  constructor(private viewportScroller: ViewportScroller, private translate: TranslateService, private router: Router) {}
+  constructor(private viewportScroller: ViewportScroller, private translate: TranslateService, private router: Router) {
+    const browserLang = this.translate.getBrowserLang();
+    this.translate.use(browserLang || 'de');
+  }
   mailTest = false;
   http = inject(HttpClient);
   setAnchorTo(anchor: string): void {
@@ -44,7 +47,6 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
-      // Daten direkt aus dem Form extrahieren
       const formData = {
         name: ngForm.form.get('name')?.value || '',
         email: ngForm.form.get('email')?.value || '',

@@ -1,17 +1,18 @@
-
 .toast-success {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-  background: var(--primary-color2);
-  color: var(--primary-color1);
+  background: #13074e;
+  color: var(--primary-color2);
   padding: 1rem 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   z-index: 1000;
   font-size: 1.1rem;
   opacity: 0.95;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0px 0px 41px 15px rgba(2, 244, 192, 0.8);
+  -moz-box-shadow: 0px 0px 41px 15px rgba(2, 244, 192, 0.8);
+  box-shadow: 0px 0px 41px 15px rgba(2, 244, 192, 0.8);
 }
 .contact-wrapper {
   max-width: 1440px;
