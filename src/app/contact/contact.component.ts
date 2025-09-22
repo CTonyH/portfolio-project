@@ -14,6 +14,7 @@ let email: string;
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  showSuccessToast = false;
   email = 'tony.hirschligau@googlemail.com';
   isFocused: { [key: string]: boolean } = {};
   privacyAccepted: boolean = false;
@@ -50,33 +51,32 @@ export class ContactComponent {
         message: ngForm.form.get('message')?.value || '',
       };
 
-      console.log('Form data to send:', formData);
+      const showToast = () => {
+        this.showSuccessToast = true;
+        setTimeout(() => {
+          this.showSuccessToast = false;
+        }, 3000);
+      };
 
       if (!this.mailTest) {
         this.http
           .post(this.post.endPoint, this.post.body(formData), this.post.options)
           .subscribe({
             next: (response) => {
-              console.log('Email sent successfully:', response);
               ngForm.resetForm();
-              this.contactData = { name: '', email: '', message: '' }; // Reset contactData
-              // Hier könntest du eine Erfolgsmeldung anzeigen
+              this.contactData = { name: '', email: '', message: '' };
+              showToast();
             },
             error: (error) => {
               console.error('Error sending email:', error);
-              // Hier könntest du eine Fehlermeldung anzeigen
             },
             complete: () => console.info('Email send request complete'),
           });
       } else {
-        console.log('Test mode - Form data:', formData);
         ngForm.resetForm();
-        this.contactData = { name: '', email: '', message: '' }; // Reset contactData
+        this.contactData = { name: '', email: '', message: '' };
+        showToast();
       }
-    } else {
-      console.log('Form is invalid or not submitted');
-      console.log('Form valid:', ngForm.form.valid);
-      console.log('Form submitted:', ngForm.submitted);
     }
   }
 

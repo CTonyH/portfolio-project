@@ -80,7 +80,8 @@
       "privacy-text": "I've read the",
       "privacy-link": "privacy policy",
       "privacy-agree": "and agree to the processing of my data as outlined.",
-      "send-button": "Send"
+  "send-button": "Send",
+  "success-message": "Message sent successfully!"
     }
   }
 }

@@ -239,3 +239,9 @@
     </div>
   </div>
 </section>
+
+@if (showSuccessToast) {
+<div class="toast-success">
+  {{ 'contact.form.success-message' | translate }}
+</div>
+}
