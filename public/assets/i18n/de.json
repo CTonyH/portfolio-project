@@ -74,10 +74,10 @@
       "message-placeholder": "Ihre Nachricht",
       "message-error": "Nachricht erforderlich",
       "privacy-text": "Ich habe die",
-      "privacy-link": "Datenschutzerklärung",
-      "privacy-agree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-  "send-button": "Nachricht senden :)",
-  "success-message": "Nachricht erfolgreich gesendet!"
+    "privacy-link": "Datenschutzerklärung",
+    "privacy-agree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "send-button": "Senden",
+    "success-message": "Nachricht erfolgreich gesendet!"
     }
   }
 }
